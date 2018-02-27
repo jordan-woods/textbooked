@@ -54,14 +54,46 @@
 		C44988FA203B8A97000CD384 /* textbooked */ = {
 			isa = PBXGroup;
 			children = (
-				C44988FB203B8A97000CD384 /* AppDelegate.swift */,
-				C44988FD203B8A97000CD384 /* ViewController.swift */,
-				C44988FF203B8A97000CD384 /* Main.storyboard */,
+				C4498911203B8CF6000CD384 /* Model */,
+				C4498912203B8D01000CD384 /* View */,
+				C4498913203B8D0F000CD384 /* Controller */,
 				C4498902203B8A97000CD384 /* Assets.xcassets */,
-				C4498904203B8A97000CD384 /* LaunchScreen.storyboard */,
-				C4498907203B8A97000CD384 /* Info.plist */,
+				C4498915203B8D30000CD384 /* Supporting Files */,
 			);
 			path = textbooked;
+			sourceTree = "<group>";
+		};
+		C4498911203B8CF6000CD384 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C4498912203B8D01000CD384 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C4498904203B8A97000CD384 /* LaunchScreen.storyboard */,
+				C44988FF203B8A97000CD384 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C4498913203B8D0F000CD384 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C44988FD203B8A97000CD384 /* ViewController.swift */,
+				C44988FB203B8A97000CD384 /* AppDelegate.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		C4498915203B8D30000CD384 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C4498907203B8A97000CD384 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

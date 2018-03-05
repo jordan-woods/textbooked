@@ -5,7 +5,7 @@ This Software Development Plan provides the details of the planned development f
 
 In the TextBooked application, users can post books that they are looking to sell. They will be prompted to specify information such as book price and quality. Users can also search for textbooks they would like to purchase from sellers. The application is meant to ease the process of finding a textbook from another student on campus. Textbook transactions between students are usually cheaper than purchasing that same book from Amazon or similar sites. TextBooked also allows students to get rid of the clutter of old textbooks.
 
-**By 10/18, the homepage will be able to display activities that have been requested from various API’s. By 10/25, the database schema will be defined and the login/create account web page will be created. By 11/1 the Software Development Document will be written. By 11/8 users will be able to log in and out of accounts that store their information. The alpha beta presentation will then be on 11/29.**
+By 3/05, the the frontend will be implemented using Swift. By 3/19, Firebase will be setup and integrated into TextBooked, as well as the login functionality. By 4/02 the frontend will populate with data. The last month of the semester will be spend tying up loose ends for the project, allowing me to complete the project to my maximum ability.
 
 ### 4.1.1 Project Deliverables
 **1/22/18:**
@@ -73,7 +73,7 @@ Our project schedule consists of our class deliverables as well as software deli
 All tasks will be performed by me.
 
 Task     | Hardware | Software
------------------- |-------------|-----------| -------------
+------------------ | ------------- | ----------- | -------------
 Mockups  | MacBook | Adobe Experience Design
 Frontend layout with connections to backend | MacBook | Xcode, Swift, Github
 Firebase setup and integration | MacBook | Firebase, Xcode, Swift, Github

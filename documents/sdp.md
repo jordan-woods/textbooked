@@ -27,7 +27,7 @@ _Software Development Plan Document (re-submit)_ - This will include all revisio
 **4/02/18:**
 _Requirements Specification Document (re-submit)_ - This will include all revisions of the Requirements Specification Document.
 
-_Design Review Presentation_
+_Design Review Presentation_ - This will be an initial presentation of the application as completed by this date.
 
 **4/09/18:**
 _Preliminary Poster_ - This will be a first draft of the poster for TextBooked.
@@ -67,18 +67,7 @@ I will be completing this project as a "one-man team", handling frontend, backen
 ## 4.4 Project Schedule
 Our project schedule consists of our class deliverables as well as software deliverables toward the end product.
 ### 4.4.1 GANTT Chart
-- Project Proposal: 1/08/18 - 1/22/18
-- Mockups: 1/15/18 - 1/22/18
-- Take course on iOS development: 1/22/18 - 2/19/18
-- Create Requirements Specification Document: 1/29/18 - 2/05/18
-- Frontend implementation: 2/19/18 - 3/05/18
-- Create Software Development Plan Document: 2/26/18 - 3/05/18
-- Firebase setup and integration: 3/05/18 - 3/19/18
-- Login logistics: 3/12/18 - 3/19/18
-- Data object creation: 3/19/18 - 3/26/18
-- Populate frontend with data: 3/26/18 - 4/02/18
-- Tie up loose ends: 4/02/18 - 4/30/18
-- Create Project Poster: 4/02/18 - 4/09/18
+![GANTT Chart](https://raw.githubusercontent.com/jordan-woods/textbooked/master/documents/ganttChart.png)
 
 ### 4.4.2 Task/Resource Table
 All tasks will be performed by me.

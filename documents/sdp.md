@@ -73,7 +73,7 @@ Our project schedule consists of our class deliverables as well as software deli
 All tasks will be performed by me.
 
 Task     | Hardware | Software
------------------- | ------------- | ----------- | -------------
+------------------ | ------------- | ----------- | -------------  
 Mockups  | MacBook | Adobe Experience Design
 Frontend layout with connections to backend | MacBook | Xcode, Swift, Github
 Firebase setup and integration | MacBook | Firebase, Xcode, Swift, Github

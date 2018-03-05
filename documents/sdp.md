@@ -1,0 +1,93 @@
+# 4 TextBooked Software Development Plan
+## 4.1 Plan Introduction
+
+This Software Development Plan provides the details of the planned development for the TextBooked iOS application which facilitates the buying and selling of textbooks on college campuses.     
+
+In the TextBooked application, users can post books that they are looking to sell. They will be prompted to specify information such as book price and quality. Users can also search for textbooks they would like to purchase from sellers. The application is meant to ease the process of finding a textbook from another student on campus. Textbook transactions between students are usually cheaper than purchasing that same book from Amazon or similar sites. TextBooked also allows students to get rid of the clutter of old textbooks.
+
+**By 10/18, the homepage will be able to display activities that have been requested from various API’s. By 10/25, the database schema will be defined and the login/create account web page will be created. By 11/1 the Software Development Document will be written. By 11/8 users will be able to log in and out of accounts that store their information. The alpha beta presentation will then be on 11/29.**
+
+### 4.1.1 Project Deliverables
+**1/22/18:**
+_Project Proposal Document_ - This document is made up of two parts. First is a description of what the project is, which is high-level overview of the project detailing software/hardware requirements along with the future vision of the project. The second part is the project justification.  This section serves to explain why the project is appropriate for the class in terms of use of knowledge from previous classes, suitable amount of difficulty, etc.
+
+**2/05/18:**
+_Requirements Specification Document_ - This document outlines the low level requirements for the project: functional, performance, and environment requirements.
+
+**3/05/18:**
+_Software Development Plan Document (complete)_ - This documents gives a detailed
+description of the entire project. This includes explaining the process that will be used
+to produce the required software and final product by the end of the semester.  It will
+also discuss specific member roles, team structure, as well as the schedules for team
+meetings and project deliverables.
+
+**3/19/18:**
+_Software Development Plan Document (re-submit)_ - This will include all revisions of the Software Development Plan Document.
+
+**4/02/18:**
+_Requirements Specification Document (re-submit)_ - This will include all revisions of the Requirements Specification Document.
+
+_Design Review Presentation_
+
+**4/09/18:**
+_Preliminary Poster_ - This will be a first draft of the poster for TextBooked.
+
+**4/30/18:**
+_Final Product Delivery_ - Application will be provided with completed functionality and design.
+
+## 4.2 Project Resources
+### 4.2.1 Hardware Resources
+  Resource               | Development   | Execution
+  ------------------     | ------------- | -----------
+  macOS Machine          | ✓             |
+  2 GB RAM (Minimum)     | ✓             |
+  Display                | ✓             |
+  Internet Connection    | ✓             | ✓
+  iPhone 4 (Minimum)     | ✓             | ✓
+
+### 4.2.2 Software Resources
+  Resource                                 | Development   | Execution
+  ---------------------------------------- | ------------- | ---------
+  macOS                                    | ✓             |
+  iOS 11                                   | ✓             |
+  iOS 9 (Minimum)                          | ✓             | ✓
+  Swift 4                                  | ✓             |
+  Xcode 9                                  | ✓             |
+  Firebase                                 | ✓             |
+  GitHub                                   | ✓             |
+  Adobe Experience Design (XD)             | ✓             |
+  Google Drive                             | ✓             |
+
+## 4.3 Project Organization
+I will be completing this project as a "one-man team", handling frontend, backend, and database functionalities.
+**Frontend:** wire-framing, frontend implementation, user experience
+**Backend:** Firebase integration, account verification
+**Database:** implementation of Firebase
+
+## 4.4 Project Schedule
+Our project schedule consists of our class deliverables as well as software deliverables toward the end product.
+### 4.4.1 GANTT Chart
+- Project Proposal: 1/08/18 - 1/22/18
+- Mockups: 1/15/18 - 1/22/18
+- Take course on iOS development: 1/22/18 - 2/19/18
+- Create Requirements Specification Document: 1/29/18 - 2/05/18
+- Frontend implementation: 2/19/18 - 3/05/18
+- Create Software Development Plan Document: 2/26/18 - 3/05/18
+- Firebase setup and integration: 3/05/18 - 3/19/18
+- Login logistics: 3/12/18 - 3/19/18
+- Data object creation: 3/19/18 - 3/26/18
+- Populate frontend with data: 3/26/18 - 4/02/18
+- Tie up loose ends: 4/02/18 - 4/30/18
+- Create Project Poster: 4/02/18 - 4/09/18
+
+### 4.4.2 Task/Resource Table
+All tasks will be performed by me.
+
+Task     | Hardware | Software
+------------------ |-------------|-----------| -------------
+Mockups  | MacBook | Adobe Experience Design
+Frontend layout with connections to backend | MacBook | Xcode, Swift, Github
+Firebase setup and integration | MacBook | Firebase, Xcode, Swift, Github
+Data object creation | MacBook | Xcode, Swift, Github
+Populate frontend with real information | MacBook | Firebase, Xcode, Swift, Github
+Login retrieves account information | MacBook | Firebase, Xcode, Swift, Github

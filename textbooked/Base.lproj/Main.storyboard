@@ -85,6 +85,9 @@
                                             <constraint firstAttribute="height" constant="22" id="S7Y-FX-Lnq"/>
                                         </constraints>
                                         <state key="normal" title="Login"/>
+                                        <connections>
+                                            <segue destination="jb5-DX-pwm" kind="show" id="KpQ-PQ-Qu6"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -116,6 +119,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="621.60000000000002" y="50.824587706146929"/>
+        </scene>
+        <!--SELL-->
+        <scene sceneID="alc-zH-mfl">
+            <objects>
+                <viewController id="5KL-q8-vFh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Hk-d3-YMe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.53640516760000001" green="0.68426783820000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="0L2-fh-wIz"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="SELL" id="AWb-OF-WL3">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-16"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6iX-UH-RfT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2299" y="380"/>
+        </scene>
+        <!--BUY-->
+        <scene sceneID="I6B-Fw-Jne">
+            <objects>
+                <viewController id="BSz-QF-WBy" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vHC-99-8lE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
+                        <viewLayoutGuide key="safeArea" id="Okg-my-pM1"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="BUY" id="iJm-yy-Rxj">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-16"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fbw-Go-5u9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2299" y="-284"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="dFO-Z0-sCa">
+            <objects>
+                <tabBarController id="jb5-DX-pwm" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" insetsLayoutMarginsFromSafeArea="NO" id="U8u-aS-0Rf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BSz-QF-WBy" kind="relationship" relationship="viewControllers" id="zCj-9t-sra"/>
+                        <segue destination="5KL-q8-vFh" kind="relationship" relationship="viewControllers" id="g2Q-9H-4ol"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BB3-pm-Dbl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1349" y="49"/>
         </scene>
     </scenes>
     <resources>

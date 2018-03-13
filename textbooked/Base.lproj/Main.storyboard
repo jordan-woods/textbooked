@@ -120,7 +120,7 @@
             </objects>
             <point key="canvasLocation" x="621.60000000000002" y="50.824587706146929"/>
         </scene>
-        <!--SELL-->
+        <!--View Controller-->
         <scene sceneID="alc-zH-mfl">
             <objects>
                 <viewController id="5KL-q8-vFh" sceneMemberID="viewController">
@@ -130,15 +130,13 @@
                         <color key="backgroundColor" red="0.53640516760000001" green="0.68426783820000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="0L2-fh-wIz"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="SELL" id="AWb-OF-WL3">
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-16"/>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="tah-PC-f5g"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6iX-UH-RfT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2299" y="380"/>
+            <point key="canvasLocation" x="3078" y="379"/>
         </scene>
-        <!--BUY-->
+        <!--View Controller-->
         <scene sceneID="I6B-Fw-Jne">
             <objects>
                 <viewController id="BSz-QF-WBy" sceneMemberID="viewController">
@@ -148,13 +146,11 @@
                         <color key="backgroundColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
                         <viewLayoutGuide key="safeArea" id="Okg-my-pM1"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="BUY" id="iJm-yy-Rxj">
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-16"/>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="7NR-nC-zmT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fbw-Go-5u9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2299" y="-284"/>
+            <point key="canvasLocation" x="3079" y="-285"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="dFO-Z0-sCa">
@@ -165,13 +161,55 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BSz-QF-WBy" kind="relationship" relationship="viewControllers" id="zCj-9t-sra"/>
-                        <segue destination="5KL-q8-vFh" kind="relationship" relationship="viewControllers" id="g2Q-9H-4ol"/>
+                        <segue destination="Zke-Aq-lOk" kind="relationship" relationship="viewControllers" id="zCj-9t-sra"/>
+                        <segue destination="llh-xg-JJY" kind="relationship" relationship="viewControllers" id="g2Q-9H-4ol"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BB3-pm-Dbl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1349" y="49"/>
+        </scene>
+        <!--BUY-->
+        <scene sceneID="BFq-a4-0cC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zke-Aq-lOk" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="BUY" id="iJm-yy-Rxj">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-16"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YdU-Zp-y6G">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BSz-QF-WBy" kind="relationship" relationship="rootViewController" id="4hT-xo-oH5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kbJ-Nd-CaF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2297.5999999999999" y="-284.25787106446779"/>
+        </scene>
+        <!--SELL-->
+        <scene sceneID="mOg-82-obQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="llh-xg-JJY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="SELL" id="AWb-OF-WL3">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-16"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KU9-RY-Gif">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5KL-q8-vFh" kind="relationship" relationship="rootViewController" id="336-Bv-jlm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cPQ-pS-bGe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2297.5999999999999" y="379.61019490254876"/>
         </scene>
     </scenes>
     <resources>

@@ -1,0 +1,6 @@
+framework module Pods_textbooked {
+  umbrella header "Pods-textbooked-umbrella.h"
+
+  export *
+  module * { export * }
+}

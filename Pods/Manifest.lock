@@ -1,0 +1,15 @@
+PODS:
+  - SVProgressHUD (2.2.5)
+  - SWRevealViewController (2.3.0)
+
+DEPENDENCIES:
+  - SVProgressHUD
+  - SWRevealViewController
+
+SPEC CHECKSUMS:
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SWRevealViewController: 6d3fd97f70112fd7cef9de14df4260eacce4c63a
+
+PODFILE CHECKSUM: 1e70ca88bcc0af04740e6eac8b8382e1b6cd4c95
+
+COCOAPODS: 1.4.0

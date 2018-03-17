@@ -143,7 +143,7 @@
                     <view key="view" contentMode="scaleToFill" id="vHC-99-8lE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" red="0.67385786800000003" green="0.179130029" blue="0.18543891130000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Okg-my-pM1"/>
                     </view>
                     <navigationItem key="navigationItem" id="7NR-nC-zmT"/>

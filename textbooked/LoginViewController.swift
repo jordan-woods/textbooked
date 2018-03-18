@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Firebase
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
@@ -23,6 +24,15 @@ class ViewController: UIViewController {
     }
 
     @IBAction func loginButtonPressed(_ sender: UIButton) {
+        Auth.auth().signIn(withEmail: usernameField.text!, password: passwordField.text!) { (user, error) in
+            
+            if error != nil {
+                print(error!)
+            } else {
+                print("Login successful!")
+                self.performSegue(withIdentifier: "goToBuySell", sender: self)
+            }
+        }
     }
     
 }

@@ -86,6 +86,7 @@
                                         </constraints>
                                         <state key="normal" title="Login"/>
                                         <connections>
+                                            <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EAp-MX-tB6"/>
                                             <segue destination="jb5-DX-pwm" kind="show" id="KpQ-PQ-Qu6"/>
                                         </connections>
                                     </button>
@@ -115,15 +116,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="passwordField" destination="mqs-gK-BvY" id="7PV-9G-2x4"/>
+                        <outlet property="usernameField" destination="gNE-Vo-bRo" id="1eB-8a-84X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="621.60000000000002" y="50.824587706146929"/>
         </scene>
-        <!--View Controller-->
+        <!--Sell View Controller-->
         <scene sceneID="alc-zH-mfl">
             <objects>
-                <viewController id="5KL-q8-vFh" sceneMemberID="viewController">
+                <viewController id="5KL-q8-vFh" customClass="SellViewController" customModule="textbooked" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Hk-d3-YMe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -136,10 +141,10 @@
             </objects>
             <point key="canvasLocation" x="3078" y="379"/>
         </scene>
-        <!--View Controller-->
+        <!--Buy View Controller-->
         <scene sceneID="I6B-Fw-Jne">
             <objects>
-                <viewController id="BSz-QF-WBy" sceneMemberID="viewController">
+                <viewController id="BSz-QF-WBy" customClass="BuyViewController" customModule="textbooked" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vHC-99-8lE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

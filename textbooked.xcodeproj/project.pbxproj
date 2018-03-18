@@ -14,6 +14,9 @@
 		C4498903203B8A97000CD384 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4498902203B8A97000CD384 /* Assets.xcassets */; };
 		C4498906203B8A97000CD384 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4498904203B8A97000CD384 /* LaunchScreen.storyboard */; };
 		C44989172044EA1F000CD384 /* documents in Resources */ = {isa = PBXBuildFile; fileRef = C44989162044EA1E000CD384 /* documents */; };
+		C48E2439205E08D400CFB18F /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48E2438205E08D400CFB18F /* BuyViewController.swift */; };
+		C48E243B205E091E00CFB18F /* SellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48E243A205E091E00CFB18F /* SellViewController.swift */; };
+		C48E243D205E125600CFB18F /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = C48E243C205E125600CFB18F /* GoogleService-Info-2.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		C4498905203B8A97000CD384 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4498907203B8A97000CD384 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C44989162044EA1E000CD384 /* documents */ = {isa = PBXFileReference; lastKnownFileType = folder; path = documents; sourceTree = "<group>"; };
+		C48E2438205E08D400CFB18F /* BuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
+		C48E243A205E091E00CFB18F /* SellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellViewController.swift; sourceTree = "<group>"; };
+		C48E243C205E125600CFB18F /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-2.plist"; sourceTree = "<group>"; };
 		C581851E930606605C0C6288 /* Pods-textbooked.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-textbooked.debug.xcconfig"; path = "Pods/Target Support Files/Pods-textbooked/Pods-textbooked.debug.xcconfig"; sourceTree = "<group>"; };
 		FA2CF26D17AC9637C8437EB0 /* Pods_textbooked.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_textbooked.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -100,6 +106,8 @@
 		C4498913203B8D0F000CD384 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C48E243A205E091E00CFB18F /* SellViewController.swift */,
+				C48E2438205E08D400CFB18F /* BuyViewController.swift */,
 				C44988FD203B8A97000CD384 /* ViewController.swift */,
 				C44988FB203B8A97000CD384 /* AppDelegate.swift */,
 			);
@@ -110,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				C4498907203B8A97000CD384 /* Info.plist */,
+				C48E243C205E125600CFB18F /* GoogleService-Info-2.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -185,6 +194,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C48E243D205E125600CFB18F /* GoogleService-Info-2.plist in Resources */,
 				C4498906203B8A97000CD384 /* LaunchScreen.storyboard in Resources */,
 				C4498903203B8A97000CD384 /* Assets.xcassets in Resources */,
 				C4498901203B8A97000CD384 /* Main.storyboard in Resources */,
@@ -202,13 +212,23 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-textbooked/Pods-textbooked-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SWRevealViewController/SWRevealViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWRevealViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -257,6 +277,8 @@
 			files = (
 				C44988FE203B8A97000CD384 /* ViewController.swift in Sources */,
 				C44988FC203B8A97000CD384 /* AppDelegate.swift in Sources */,
+				C48E243B205E091E00CFB18F /* SellViewController.swift in Sources */,
+				C48E2439205E08D400CFB18F /* BuyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

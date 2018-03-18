@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>135633247004-ro7h84pn6shjlghkclducjhlhjouvvlv.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.135633247004-ro7h84pn6shjlghkclducjhlhjouvvlv</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCAXV2UFABDnBXDHFYmYw112mgtkpLQV2U</string>
+	<key>GCM_SENDER_ID</key>
+	<string>135633247004</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.jordanwoods.textbooked</string>
+	<key>PROJECT_ID</key>
+	<string>textbooked-219f7</string>
+	<key>STORAGE_BUCKET</key>
+	<string>textbooked-219f7.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:135633247004:ios:312022b3a0fed7df</string>
+	<key>DATABASE_URL</key>
+	<string>https://textbooked-219f7.firebaseio.com</string>
+</dict>
+</plist>

@@ -7,11 +7,17 @@
 //
 
 import UIKit
+import Firebase
 
-class BuyViewController: UIViewController {
-
+class BuyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var textbookTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        textbookTableView.delegate = self
+        textbookTableView.dataSource = self
 
         // Do any additional setup after loading the view.
     }
@@ -19,6 +25,10 @@ class BuyViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
     }
     
 

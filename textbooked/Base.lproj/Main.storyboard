@@ -161,14 +161,42 @@
                     <view key="view" contentMode="scaleToFill" id="vHC-99-8lE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.67385786800000003" green="0.179130029" blue="0.18543891130000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C4s-zX-d4f">
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BSz-QF-WBy" id="5Ld-cO-Yf5"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YxE-kw-Lgg">
+                                <rect key="frame" x="0.0" y="120" width="375" height="498"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Okg-my-pM1"/>
                     </view>
                     <navigationItem key="navigationItem" id="7NR-nC-zmT"/>
+                    <connections>
+                        <outlet property="searchBar" destination="C4s-zX-d4f" id="iNa-Iz-3EO"/>
+                        <outlet property="searchDisplayController" destination="pVa-Xx-Oqq" id="Jg5-3T-UOk"/>
+                        <outlet property="textbookTableView" destination="YxE-kw-Lgg" id="pHJ-y9-wow"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fbw-Go-5u9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="pVa-Xx-Oqq">
+                    <connections>
+                        <outlet property="delegate" destination="BSz-QF-WBy" id="Lpe-Md-4sK"/>
+                        <outlet property="searchBar" destination="C4s-zX-d4f" id="cXX-bT-Xy5"/>
+                        <outlet property="searchContentsController" destination="BSz-QF-WBy" id="jrr-kF-ZLJ"/>
+                        <outlet property="searchResultsDataSource" destination="BSz-QF-WBy" id="VQN-Fu-Dey"/>
+                        <outlet property="searchResultsDelegate" destination="BSz-QF-WBy" id="YYS-kK-3LB"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="3079" y="-285"/>
+            <point key="canvasLocation" x="3077.5999999999999" y="-285.60719640179911"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="dFO-Z0-sCa">
@@ -234,6 +262,7 @@
         <!--BUY-->
         <scene sceneID="BFq-a4-0cC">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kbJ-Nd-CaF" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zke-Aq-lOk" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="BUY" id="iJm-yy-Rxj">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-16"/>
@@ -248,7 +277,6 @@
                         <segue destination="BSz-QF-WBy" kind="relationship" relationship="rootViewController" id="4hT-xo-oH5"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kbJ-Nd-CaF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2297.5999999999999" y="-284.25787106446779"/>
         </scene>

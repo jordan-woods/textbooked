@@ -87,13 +87,25 @@
                                         <state key="normal" title="Login"/>
                                         <connections>
                                             <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EAp-MX-tB6"/>
-                                            <segue destination="jb5-DX-pwm" kind="show" id="KpQ-PQ-Qu6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90X-pK-QDk">
+                                        <rect key="frame" x="8" y="264" width="117" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="117" id="ati-Wr-2DZ"/>
+                                            <constraint firstAttribute="height" constant="22" id="e1m-6P-0ha"/>
+                                        </constraints>
+                                        <state key="normal" title="Create Account"/>
+                                        <connections>
+                                            <segue destination="BVx-yp-9ow" kind="show" identifier="goToRegistration" id="sbU-FL-xJd"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="azD-eH-RpS" firstAttribute="centerX" secondItem="uz6-b1-FvS" secondAttribute="centerX" id="GaL-gw-fn2"/>
+                                    <constraint firstItem="90X-pK-QDk" firstAttribute="leading" secondItem="uz6-b1-FvS" secondAttribute="leading" constant="8" id="HYX-cN-WRw"/>
                                     <constraint firstItem="azD-eH-RpS" firstAttribute="centerY" secondItem="uz6-b1-FvS" secondAttribute="centerY" id="Nlq-o4-dzO"/>
+                                    <constraint firstAttribute="bottom" secondItem="90X-pK-QDk" secondAttribute="bottom" constant="8" id="VQt-3U-cQ1"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -119,11 +131,12 @@
                     <connections>
                         <outlet property="passwordField" destination="mqs-gK-BvY" id="7PV-9G-2x4"/>
                         <outlet property="usernameField" destination="gNE-Vo-bRo" id="1eB-8a-84X"/>
+                        <segue destination="jb5-DX-pwm" kind="show" identifier="goToBuySell" id="u4N-ZJ-Rk6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="621.60000000000002" y="50.824587706146929"/>
+            <point key="canvasLocation" x="609" y="48"/>
         </scene>
         <!--Sell View Controller-->
         <scene sceneID="alc-zH-mfl">
@@ -174,6 +187,50 @@
             </objects>
             <point key="canvasLocation" x="1349" y="49"/>
         </scene>
+        <!--Register View Controller-->
+        <scene sceneID="aqu-rr-ev1">
+            <objects>
+                <viewController id="BVx-yp-9ow" customClass="RegisterViewController" customModule="textbooked" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ueY-qr-9KC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B8c-cT-JFq">
+                                <rect key="frame" x="112" y="176" width="151" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WWF-fY-MMS">
+                                <rect key="frame" x="112" y="250" width="151" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1RV-xP-sFH">
+                                <rect key="frame" x="124" y="337" width="127" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Create Account"/>
+                                <connections>
+                                    <action selector="createAccountButtonPressed:" destination="BVx-yp-9ow" eventType="touchUpInside" id="UPX-Qn-rDw"/>
+                                    <segue destination="jb5-DX-pwm" kind="show" identifier="goToBuySell" id="hjF-wE-OLe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="sBQ-ma-syF"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailField" destination="B8c-cT-JFq" id="hKp-T5-yG1"/>
+                        <outlet property="passwordField" destination="WWF-fY-MMS" id="m00-DV-L4m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eJ3-lQ-BzV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="609" y="843"/>
+        </scene>
         <!--BUY-->
         <scene sceneID="BFq-a4-0cC">
             <objects>
@@ -220,4 +277,7 @@
     <resources>
         <image name="logo" width="470" height="162"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="hjF-wE-OLe"/>
+    </inferredMetricsTieBreakers>
 </document>

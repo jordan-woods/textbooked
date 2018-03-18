@@ -18,6 +18,10 @@ class BuyViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         
         textbookTableView.delegate = self
         textbookTableView.dataSource = self
+        
+        textbookTableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "customTableViewCell")
+        
+        configureTableView()
 
         // Do any additional setup after loading the view.
     }
@@ -28,7 +32,20 @@ class BuyViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "customTableViewCell", for: indexPath) as! CustomTableViewCell
         
+        cell.textbookTitle.text = "Jordan's Textbook"
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func configureTableView() {
+        textbookTableView.rowHeight = UITableViewAutomaticDimension
+        textbookTableView.estimatedRowHeight = 120.0
     }
     
 

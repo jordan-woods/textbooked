@@ -45,7 +45,7 @@ class BuyViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     
     func configureTableView() {
         textbookTableView.rowHeight = UITableViewAutomaticDimension
-        textbookTableView.estimatedRowHeight = 120.0
+        textbookTableView.estimatedRowHeight = 180.0
     }
     
 

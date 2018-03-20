@@ -9,7 +9,14 @@
 import UIKit
 
 class SellViewController: UIViewController {
-
+    @IBOutlet weak var textbookTitle: UITextField!
+    @IBOutlet weak var textbookISBN: UITextField!
+    @IBOutlet weak var textbookAuthor: UITextField!
+    @IBOutlet weak var textbookEdition: UITextField!
+    @IBOutlet weak var textbookQuality: UISegmentedControl!
+    @IBOutlet weak var textbookPrice: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +28,9 @@ class SellViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func postPressed(_ sender: UIButton) {
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		239C34D85E0C76CF9AE09EBF /* Pods_textbooked.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2CF26D17AC9637C8437EB0 /* Pods_textbooked.framework */; };
+		C43787F720608FDD00F2634B /* Textbook.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43787F620608FDD00F2634B /* Textbook.swift */; };
 		C44988FC203B8A97000CD384 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44988FB203B8A97000CD384 /* AppDelegate.swift */; };
 		C44988FE203B8A97000CD384 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44988FD203B8A97000CD384 /* LoginViewController.swift */; };
 		C4498901203B8A97000CD384 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C44988FF203B8A97000CD384 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		5ECD77C8EE4C54D58D0FF901 /* Pods-textbooked.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-textbooked.release.xcconfig"; path = "Pods/Target Support Files/Pods-textbooked/Pods-textbooked.release.xcconfig"; sourceTree = "<group>"; };
+		C43787F620608FDD00F2634B /* Textbook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Textbook.swift; sourceTree = "<group>"; };
 		C44988F8203B8A97000CD384 /* textbooked.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = textbooked.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C44988FB203B8A97000CD384 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C44988FD203B8A97000CD384 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 		C4498911203B8CF6000CD384 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C43787F620608FDD00F2634B /* Textbook.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				C44988FE203B8A97000CD384 /* LoginViewController.swift in Sources */,
 				C4C47114205E1C300029C63B /* RegisterViewController.swift in Sources */,
 				C44988FC203B8A97000CD384 /* AppDelegate.swift in Sources */,
+				C43787F720608FDD00F2634B /* Textbook.swift in Sources */,
 				C48E243B205E091E00CFB18F /* SellViewController.swift in Sources */,
 				C48E2439205E08D400CFB18F /* BuyViewController.swift in Sources */,
 			);

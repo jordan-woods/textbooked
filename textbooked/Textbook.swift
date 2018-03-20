@@ -7,21 +7,22 @@
 //
 
 class Textbook {
-    enum Condition {
-        case perfect, veryGood, good, poor
-    }
     
     var title : String
     var author : String
     var sellerName : String
     var price : Double
     var condition : String
+    var isbn : String
+    var edition : String
     
-    init(bookTitle: String, bookAuthor: String, name: String, bookPrice: Double, bookCondition: String, imageLink: String) {
+    init(bookTitle: String, bookAuthor: String, bookISBN: String, bookEdition: String, name: String, bookPrice: Double, bookCondition: String) {
         title = bookTitle
         author = bookAuthor
+        isbn = bookISBN
         sellerName = name
         price = bookPrice
         condition = bookCondition
+        edition = bookEdition
     }
 }

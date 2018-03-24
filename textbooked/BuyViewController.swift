@@ -53,6 +53,11 @@ class BuyViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         return textbookArray.count
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
+        performSegue(withIdentifier: "showTextbookDetails", sender: self)
+    }
+    
     func configureTableView() {
         textbookTableView.rowHeight = UITableViewAutomaticDimension
         textbookTableView.estimatedRowHeight = 180.0

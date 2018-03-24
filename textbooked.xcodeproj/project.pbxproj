@@ -15,6 +15,7 @@
 		C4498903203B8A97000CD384 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4498902203B8A97000CD384 /* Assets.xcassets */; };
 		C4498906203B8A97000CD384 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4498904203B8A97000CD384 /* LaunchScreen.storyboard */; };
 		C44989172044EA1F000CD384 /* documents in Resources */ = {isa = PBXBuildFile; fileRef = C44989162044EA1E000CD384 /* documents */; };
+		C48948B92066283A00A9A7AC /* BuyDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48948B82066283A00A9A7AC /* BuyDetailsViewController.swift */; };
 		C48E2439205E08D400CFB18F /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48E2438205E08D400CFB18F /* BuyViewController.swift */; };
 		C48E243B205E091E00CFB18F /* SellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48E243A205E091E00CFB18F /* SellViewController.swift */; };
 		C48E243D205E125600CFB18F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C48E243C205E125600CFB18F /* GoogleService-Info.plist */; };
@@ -34,6 +35,7 @@
 		C4498905203B8A97000CD384 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4498907203B8A97000CD384 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C44989162044EA1E000CD384 /* documents */ = {isa = PBXFileReference; lastKnownFileType = folder; path = documents; sourceTree = "<group>"; };
+		C48948B82066283A00A9A7AC /* BuyDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyDetailsViewController.swift; sourceTree = "<group>"; };
 		C48E2438205E08D400CFB18F /* BuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
 		C48E243A205E091E00CFB18F /* SellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellViewController.swift; sourceTree = "<group>"; };
 		C48E243C205E125600CFB18F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				C4C47113205E1C300029C63B /* RegisterViewController.swift */,
 				C48E243A205E091E00CFB18F /* SellViewController.swift */,
 				C48E2438205E08D400CFB18F /* BuyViewController.swift */,
+				C48948B82066283A00A9A7AC /* BuyDetailsViewController.swift */,
 				C44988FD203B8A97000CD384 /* LoginViewController.swift */,
 				C44988FB203B8A97000CD384 /* AppDelegate.swift */,
 			);
@@ -302,6 +305,7 @@
 				C44988FC203B8A97000CD384 /* AppDelegate.swift in Sources */,
 				C43787F720608FDD00F2634B /* Textbook.swift in Sources */,
 				C48E243B205E091E00CFB18F /* SellViewController.swift in Sources */,
+				C48948B92066283A00A9A7AC /* BuyDetailsViewController.swift in Sources */,
 				C48E2439205E08D400CFB18F /* BuyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

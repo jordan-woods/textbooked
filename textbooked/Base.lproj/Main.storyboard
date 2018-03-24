@@ -362,11 +362,22 @@
                                 <rect key="frame" x="143" y="422" width="88" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Purchase"/>
+                                <connections>
+                                    <action selector="purchasePressed:" destination="KKk-lW-8Q4" eventType="touchUpInside" id="NJO-bi-1Na"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="w7g-zz-9Sz"/>
                     </view>
+                    <connections>
+                        <outlet property="sellerName" destination="llY-R0-MK5" id="SeZ-tF-lkS"/>
+                        <outlet property="textbookAuthor" destination="o4F-BF-YTd" id="tPT-H8-6gp"/>
+                        <outlet property="textbookCondition" destination="PMj-gO-Lgn" id="bQb-Rl-6do"/>
+                        <outlet property="textbookImage" destination="eTf-yj-Hor" id="xiE-H8-sSl"/>
+                        <outlet property="textbookPrice" destination="Cyy-hA-DBz" id="pYQ-9e-6f4"/>
+                        <outlet property="textbookTitle" destination="ANe-ST-KeL" id="YdY-IW-7Nv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RVE-zv-NoJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

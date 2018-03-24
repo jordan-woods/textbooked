@@ -9,7 +9,13 @@
 import UIKit
 
 class BuyDetailsViewController: UIViewController {
-
+    @IBOutlet weak var textbookImage: UIImageView!
+    @IBOutlet weak var textbookTitle: UILabel!
+    @IBOutlet weak var textbookAuthor: UILabel!
+    @IBOutlet weak var textbookCondition: UILabel!
+    @IBOutlet weak var sellerName: UILabel!
+    @IBOutlet weak var textbookPrice: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,6 +26,10 @@ class BuyDetailsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func purchasePressed(_ sender: UIButton) {
+    }
+    
     
 
     /*

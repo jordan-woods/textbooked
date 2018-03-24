@@ -18,6 +18,7 @@ class SellViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var textbookPrice: UITextField!
     @IBOutlet weak var postButton: UIButton!
     @IBOutlet weak var imageUpload: UIImageView!
+    @IBOutlet weak var uploadButton: UIButton!
     
     let picker = UIImagePickerController()
     
@@ -89,6 +90,7 @@ class SellViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         imageUpload.contentMode = .scaleAspectFit
         imageUpload.image = chosenImage
         dismiss(animated:true, completion: nil)
+        uploadButton?.removeFromSuperview()
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {

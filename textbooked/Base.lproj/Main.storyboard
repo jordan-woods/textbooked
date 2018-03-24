@@ -255,6 +255,7 @@
                         <outlet property="textbookPrice" destination="DqS-mP-H1Q" id="Zpi-kt-Ug3"/>
                         <outlet property="textbookQuality" destination="ufc-Dl-jAp" id="TBB-ue-u7M"/>
                         <outlet property="textbookTitle" destination="Za6-hX-wEe" id="wjp-g7-vbl"/>
+                        <outlet property="uploadButton" destination="hpZ-hp-byP" id="DhZ-2V-GfJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6iX-UH-RfT" userLabel="First Responder" sceneMemberID="firstResponder"/>

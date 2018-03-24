@@ -18,6 +18,9 @@ class BuyViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.textbookTableView.isUserInteractionEnabled = true
+        self.view.backgroundColor = UIColor.white
+        
         textbookTableView.delegate = self
         textbookTableView.dataSource = self
         
@@ -42,8 +45,6 @@ class BuyViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         cell.textbookCondition.text = textbookArray[indexPath.row].condition
         cell.sellPrice.text = textbookArray[indexPath.row].price
         cell.sellerName.text = textbookArray[indexPath.row].sellerName
-        
-        
         
         return cell
     }

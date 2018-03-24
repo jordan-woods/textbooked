@@ -69,17 +69,8 @@
                                             <constraint firstAttribute="width" constant="292" id="ysT-59-tMR"/>
                                         </constraints>
                                     </imageView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="RrX-wF-D7D" firstAttribute="centerY" secondItem="db5-Mt-hSr" secondAttribute="centerY" id="hkO-lv-DTI"/>
-                                    <constraint firstItem="RrX-wF-D7D" firstAttribute="centerX" secondItem="db5-Mt-hSr" secondAttribute="centerX" id="tIm-ER-1LG"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uz6-b1-FvS" userLabel="Bottom Container">
-                                <rect key="frame" x="0.0" y="373" width="375" height="294"/>
-                                <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azD-eH-RpS">
-                                        <rect key="frame" x="129.5" y="136.5" width="116" height="22"/>
+                                        <rect key="frame" x="129" y="239" width="116" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="116" id="Er3-lj-ufG"/>
                                             <constraint firstAttribute="height" constant="22" id="S7Y-FX-Lnq"/>
@@ -89,6 +80,17 @@
                                             <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EAp-MX-tB6"/>
                                         </connections>
                                     </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="azD-eH-RpS" firstAttribute="centerX" secondItem="db5-Mt-hSr" secondAttribute="centerX" id="O7W-Tv-APJ"/>
+                                    <constraint firstItem="azD-eH-RpS" firstAttribute="centerY" secondItem="db5-Mt-hSr" secondAttribute="centerY" constant="103" id="eSg-hH-NZu"/>
+                                    <constraint firstItem="RrX-wF-D7D" firstAttribute="centerY" secondItem="db5-Mt-hSr" secondAttribute="centerY" id="hkO-lv-DTI"/>
+                                    <constraint firstItem="RrX-wF-D7D" firstAttribute="centerX" secondItem="db5-Mt-hSr" secondAttribute="centerX" id="tIm-ER-1LG"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uz6-b1-FvS" userLabel="Bottom Container">
+                                <rect key="frame" x="0.0" y="373" width="375" height="294"/>
+                                <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90X-pK-QDk">
                                         <rect key="frame" x="8" y="264" width="117" height="22"/>
                                         <constraints>
@@ -102,9 +104,7 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="azD-eH-RpS" firstAttribute="centerX" secondItem="uz6-b1-FvS" secondAttribute="centerX" id="GaL-gw-fn2"/>
                                     <constraint firstItem="90X-pK-QDk" firstAttribute="leading" secondItem="uz6-b1-FvS" secondAttribute="leading" constant="8" id="HYX-cN-WRw"/>
-                                    <constraint firstItem="azD-eH-RpS" firstAttribute="centerY" secondItem="uz6-b1-FvS" secondAttribute="centerY" id="Nlq-o4-dzO"/>
                                     <constraint firstAttribute="bottom" secondItem="90X-pK-QDk" secondAttribute="bottom" constant="8" id="VQt-3U-cQ1"/>
                                 </constraints>
                             </view>
@@ -227,11 +227,27 @@
                                     <action selector="postPressed:" destination="5KL-q8-vFh" eventType="touchUpInside" id="yPc-pk-Scy"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpZ-hp-byP">
+                                <rect key="frame" x="104" y="293" width="43" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="42"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="uploadPhotoPressed:" destination="5KL-q8-vFh" eventType="touchUpInside" id="su6-xE-gob"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Untitled copy 5" translatesAutoresizingMaskIntoConstraints="NO" id="f7u-ND-U1R">
+                                <rect key="frame" x="16" y="278" width="80" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0L2-fh-wIz"/>
                     </view>
                     <navigationItem key="navigationItem" title="Book Information" id="tah-PC-f5g"/>
                     <connections>
+                        <outlet property="imageUpload" destination="f7u-ND-U1R" id="Tnj-Z0-J0g"/>
                         <outlet property="postButton" destination="TCe-XE-6oL" id="s99-0Z-NII"/>
                         <outlet property="textbookAuthor" destination="Qij-jR-vek" id="5Gw-jl-gXx"/>
                         <outlet property="textbookEdition" destination="gLq-BY-9Tb" id="QEa-q5-I1g"/>
@@ -488,6 +504,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Untitled copy 5" width="1517" height="1517"/>
         <image name="logo" width="470" height="162"/>
     </resources>
     <inferredMetricsTieBreakers>

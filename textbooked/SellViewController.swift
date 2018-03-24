@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class SellViewController: UIViewController {
+class SellViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var textbookTitle: UITextField!
     @IBOutlet weak var textbookISBN: UITextField!
     @IBOutlet weak var textbookAuthor: UITextField!
@@ -17,11 +17,16 @@ class SellViewController: UIViewController {
     @IBOutlet weak var textbookQuality: UISegmentedControl!
     @IBOutlet weak var textbookPrice: UITextField!
     @IBOutlet weak var postButton: UIButton!
+    @IBOutlet weak var imageUpload: UIImageView!
+    
+    let picker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor.white
+        
+        picker.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -71,6 +76,27 @@ class SellViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func uploadPhotoPressed(_ sender: UIButton) {
+        picker.allowsEditing = false
+        picker.sourceType = .photoLibrary
+        picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
+        present(picker, animated: true, completion: nil)
+    }
+    
+    @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        imageUpload.contentMode = .scaleAspectFit
+        imageUpload.image = chosenImage
+        dismiss(animated:true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
     
     /*
     // MARK: - Navigation

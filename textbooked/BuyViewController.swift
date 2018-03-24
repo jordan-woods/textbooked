@@ -10,6 +10,8 @@ import UIKit
 import Firebase
 
 class BuyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    var textbookArray : [Textbook] = [Textbook]()
+    
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var textbookTableView: UITableView!
     
@@ -22,6 +24,7 @@ class BuyViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         textbookTableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "customTableViewCell")
         
         configureTableView()
+        retrieveTextbooks()
 
         // Do any additional setup after loading the view.
     }
@@ -34,18 +37,45 @@ class BuyViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customTableViewCell", for: indexPath) as! CustomTableViewCell
         
-        cell.textbookTitle.text = "Jordan's Textbook"
+        cell.textbookTitle.text = textbookArray[indexPath.row].title
+        cell.textbookAuthor.text = textbookArray[indexPath.row].author
+        cell.textbookCondition.text = textbookArray[indexPath.row].condition
+        cell.sellPrice.text = textbookArray[indexPath.row].price
+        cell.sellerName.text = textbookArray[indexPath.row].sellerName
+        
+        
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return textbookArray.count
     }
     
     func configureTableView() {
         textbookTableView.rowHeight = UITableViewAutomaticDimension
         textbookTableView.estimatedRowHeight = 180.0
+    }
+    
+    func retrieveTextbooks() {
+        let textbookDB = Database.database().reference().child("Textbooks")
+        textbookDB.observe(.childAdded) { (snapshot) in
+            let snapshotValue = snapshot.value as! Dictionary<String,String>
+            
+            let isbn = snapshotValue["TextbookISBN"]!
+            let title = snapshotValue["TextbookTitle"]!
+            let author = snapshotValue["TextbookAuthor"]!
+            let edition = snapshotValue["TextbookEdition"]!
+            let poster = snapshotValue["Poster"]!
+            let quality = snapshotValue["TextbookQuality"]!
+            let price = snapshotValue["TextbookPrice"]!
+            
+            let textbook = Textbook(bookTitle: title, bookAuthor: author, bookISBN: isbn, bookEdition: edition, name: poster, bookPrice: price, bookCondition: quality)
+            
+            self.textbookArray.append(textbook)
+            self.configureTableView()
+            self.textbookTableView.reloadData()
+        }
     }
     
 

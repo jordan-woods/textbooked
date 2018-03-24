@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SellViewController: UIViewController {
     @IBOutlet weak var textbookTitle: UITextField!
@@ -15,12 +16,12 @@ class SellViewController: UIViewController {
     @IBOutlet weak var textbookEdition: UITextField!
     @IBOutlet weak var textbookQuality: UISegmentedControl!
     @IBOutlet weak var textbookPrice: UITextField!
-    
+    @IBOutlet weak var postButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.view.backgroundColor = UIColor.white
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,6 +30,46 @@ class SellViewController: UIViewController {
     }
     
     @IBAction func postPressed(_ sender: UIButton) {
+        textbookTitle.isEnabled = false
+        textbookISBN.isEnabled = false
+        textbookAuthor.isEnabled = false
+        textbookEdition.isEnabled = false
+        textbookQuality.isEnabled = false
+        textbookPrice.isEnabled = false
+        postButton.isEnabled = false
+        
+        let textbookDB = Database.database().reference().child("Textbooks")
+        let textbookDictionary = ["Poster": Auth.auth().currentUser?.email,
+                                  "TextbookTitle": textbookTitle.text!,
+                                  "TextbookISBN": textbookISBN.text!,
+                                  "TextbookAuthor": textbookAuthor.text!,
+                                  "TextbookEdition": textbookEdition.text!,
+                                  "TextbookQuality": textbookQuality.titleForSegment(at: textbookQuality.selectedSegmentIndex),
+                                  "TextbookPrice": textbookPrice.text!]
+        
+        textbookDB.childByAutoId().setValue(textbookDictionary) {
+            (error, reference) in
+            
+            if error != nil {
+                print(error!)
+            } else {
+                print("Textbook successfully saved!")
+                
+                self.textbookTitle.isEnabled = true
+                self.textbookISBN.isEnabled = true
+                self.textbookAuthor.isEnabled = true
+                self.textbookEdition.isEnabled = true
+                self.textbookQuality.isEnabled = true
+                self.textbookPrice.isEnabled = true
+                self.postButton.isEnabled = true
+                
+                self.textbookTitle.text = ""
+                self.textbookISBN.text = ""
+                self.textbookAuthor.text = ""
+                self.textbookEdition.text = ""
+                self.textbookPrice.text = ""
+            }
+        }
     }
     
     /*

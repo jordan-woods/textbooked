@@ -11,12 +11,12 @@ class Textbook {
     var title : String
     var author : String
     var sellerName : String
-    var price : Double
+    var price : String
     var condition : String
     var isbn : String
     var edition : String
     
-    init(bookTitle: String, bookAuthor: String, bookISBN: String, bookEdition: String, name: String, bookPrice: Double, bookCondition: String) {
+    init(bookTitle: String, bookAuthor: String, bookISBN: String, bookEdition: String, name: String, bookPrice: String, bookCondition: String) {
         title = bookTitle
         author = bookAuthor
         isbn = bookISBN

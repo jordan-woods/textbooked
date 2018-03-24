@@ -167,7 +167,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Edition" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gLq-BY-9Tb">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Edition" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gLq-BY-9Tb">
                                 <rect key="frame" x="56" y="189" width="263" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -232,6 +232,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Book Information" id="tah-PC-f5g"/>
                     <connections>
+                        <outlet property="postButton" destination="TCe-XE-6oL" id="s99-0Z-NII"/>
                         <outlet property="textbookAuthor" destination="Qij-jR-vek" id="5Gw-jl-gXx"/>
                         <outlet property="textbookEdition" destination="gLq-BY-9Tb" id="QEa-q5-I1g"/>
                         <outlet property="textbookISBN" destination="DgQ-gv-3k6" id="ZJg-ws-8kL"/>

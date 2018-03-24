@@ -9,6 +9,12 @@
 import UIKit
 
 class BuyDetailsViewController: UIViewController {
+    var textbookTitlePassed : String?
+    var textbookAuthorPassed : String?
+    var textbookConditionPassed : String?
+    var sellerNamePassed : String?
+    var textbookPricePassed : String?
+    
     @IBOutlet weak var textbookImage: UIImageView!
     @IBOutlet weak var textbookTitle: UILabel!
     @IBOutlet weak var textbookAuthor: UILabel!
@@ -19,7 +25,11 @@ class BuyDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        textbookTitle.text = textbookTitlePassed
+        textbookAuthor.text = textbookAuthorPassed
+        textbookCondition.text = textbookConditionPassed
+        textbookPrice.text = textbookPricePassed
+        sellerName.text = sellerNamePassed
     }
 
     override func didReceiveMemoryWarning() {

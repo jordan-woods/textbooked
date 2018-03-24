@@ -58,6 +58,19 @@ class BuyViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         performSegue(withIdentifier: "showTextbookDetails", sender: self)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showTextbookDetails" {
+            let destinationVC = segue.destination as! BuyDetailsViewController
+            let path = self.textbookTableView.indexPathForSelectedRow!
+
+            destinationVC.textbookTitlePassed = textbookArray[path.row].title
+            destinationVC.textbookAuthorPassed = textbookArray[path.row].author
+            destinationVC.textbookPricePassed = textbookArray[path.row].price
+            destinationVC.sellerNamePassed = textbookArray[path.row].sellerName
+            destinationVC.textbookConditionPassed = textbookArray[path.row].condition
+        }
+    }
+    
     func configureTableView() {
         textbookTableView.rowHeight = UITableViewAutomaticDimension
         textbookTableView.estimatedRowHeight = 180.0

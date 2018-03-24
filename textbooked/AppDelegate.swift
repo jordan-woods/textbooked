@@ -6,6 +6,8 @@
 //  Copyright © 2018 Jordan Woods. All rights reserved.
 //
 
+// Yellow color: ffc300
+
 import UIKit
 import Firebase
 

@@ -44,7 +44,10 @@ class SellViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         textbookPrice.isEnabled = false
         postButton.isEnabled = false
         
+        // let image = URL(string: imageUpload.image)!
+        
         let textbookDB = Database.database().reference().child("Textbooks")
+        // let imageDB = Storage.storage().reference().child("Images")
         let textbookDictionary = ["Poster": Auth.auth().currentUser?.email,
                                   "TextbookTitle": textbookTitle.text!,
                                   "TextbookISBN": textbookISBN.text!,
@@ -76,6 +79,8 @@ class SellViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                 self.textbookPrice.text = ""
             }
         }
+        
+        // imageDB.setValue(imageUpload.image.)
     }
     
     @IBAction func uploadPhotoPressed(_ sender: UIButton) {

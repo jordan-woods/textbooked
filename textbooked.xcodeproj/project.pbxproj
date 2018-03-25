@@ -15,6 +15,8 @@
 		C4498903203B8A97000CD384 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4498902203B8A97000CD384 /* Assets.xcassets */; };
 		C4498906203B8A97000CD384 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4498904203B8A97000CD384 /* LaunchScreen.storyboard */; };
 		C44989172044EA1F000CD384 /* documents in Resources */ = {isa = PBXBuildFile; fileRef = C44989162044EA1E000CD384 /* documents */; };
+		C47BA25820676F7D00F37E8D /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C47BA25720676F7C00F37E8D /* Roboto-Regular.ttf */; };
+		C47BA25A20676FE000F37E8D /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C47BA25920676FDF00F37E8D /* Roboto-Bold.ttf */; };
 		C48948B92066283A00A9A7AC /* BuyDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48948B82066283A00A9A7AC /* BuyDetailsViewController.swift */; };
 		C48E2439205E08D400CFB18F /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48E2438205E08D400CFB18F /* BuyViewController.swift */; };
 		C48E243B205E091E00CFB18F /* SellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48E243A205E091E00CFB18F /* SellViewController.swift */; };
@@ -35,6 +37,8 @@
 		C4498905203B8A97000CD384 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4498907203B8A97000CD384 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C44989162044EA1E000CD384 /* documents */ = {isa = PBXFileReference; lastKnownFileType = folder; path = documents; sourceTree = "<group>"; };
+		C47BA25720676F7C00F37E8D /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		C47BA25920676FDF00F37E8D /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		C48948B82066283A00A9A7AC /* BuyDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyDetailsViewController.swift; sourceTree = "<group>"; };
 		C48E2438205E08D400CFB18F /* BuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
 		C48E243A205E091E00CFB18F /* SellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +135,8 @@
 		C4498915203B8D30000CD384 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C47BA25720676F7C00F37E8D /* Roboto-Regular.ttf */,
+				C47BA25920676FDF00F37E8D /* Roboto-Bold.ttf */,
 				C4498907203B8A97000CD384 /* Info.plist */,
 				C48E243C205E125600CFB18F /* GoogleService-Info.plist */,
 			);
@@ -218,10 +224,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C48E243D205E125600CFB18F /* GoogleService-Info.plist in Resources */,
+				C47BA25820676F7D00F37E8D /* Roboto-Regular.ttf in Resources */,
 				C4498906203B8A97000CD384 /* LaunchScreen.storyboard in Resources */,
 				C4C47118205E39C30029C63B /* CustomTableViewCell.xib in Resources */,
 				C4498903203B8A97000CD384 /* Assets.xcassets in Resources */,
 				C4498901203B8A97000CD384 /* Main.storyboard in Resources */,
+				C47BA25A20676FE000F37E8D /* Roboto-Bold.ttf in Resources */,
 				C44989172044EA1F000CD384 /* documents in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

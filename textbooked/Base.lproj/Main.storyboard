@@ -83,8 +83,10 @@
                                             <constraint firstAttribute="width" constant="116" id="Er3-lj-ufG"/>
                                             <constraint firstAttribute="height" constant="22" id="S7Y-FX-Lnq"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
-                                        <state key="normal" title="Login"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
+                                        <state key="normal" title="Login">
+                                            <color key="titleColor" red="0.30196078431372547" green="0.31372549019607843" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EAp-MX-tB6"/>
                                         </connections>
@@ -100,14 +102,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uz6-b1-FvS" userLabel="Bottom Container">
                                 <rect key="frame" x="0.0" y="373" width="375" height="294"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90X-pK-QDk">
-                                        <rect key="frame" x="8" y="264" width="129" height="22"/>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90X-pK-QDk">
+                                        <rect key="frame" x="8" y="254" width="153" height="32"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="117" id="ati-Wr-2DZ"/>
-                                            <constraint firstAttribute="height" constant="22" id="e1m-6P-0ha"/>
+                                            <constraint firstAttribute="width" constant="153" id="ati-Wr-2DZ" userLabel="width = 153"/>
+                                            <constraint firstAttribute="height" constant="32" id="e1m-6P-0ha"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
-                                        <state key="normal" title="Create Account"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
+                                        <state key="normal" title="Create Account">
+                                            <color key="titleColor" red="0.30196078431372547" green="0.31372549019607843" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <segue destination="BVx-yp-9ow" kind="show" identifier="goToRegistration" id="sbU-FL-xJd"/>
                                         </connections>

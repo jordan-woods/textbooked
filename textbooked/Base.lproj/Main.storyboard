@@ -77,24 +77,8 @@
                                             <constraint firstAttribute="width" constant="292" id="ysT-59-tMR"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azD-eH-RpS">
-                                        <rect key="frame" x="129" y="239" width="116" height="22"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="116" id="Er3-lj-ufG"/>
-                                            <constraint firstAttribute="height" constant="22" id="S7Y-FX-Lnq"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
-                                        <state key="normal" title="Login">
-                                            <color key="titleColor" red="0.30196078431372547" green="0.31372549019607843" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EAp-MX-tB6"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="azD-eH-RpS" firstAttribute="centerX" secondItem="db5-Mt-hSr" secondAttribute="centerX" id="O7W-Tv-APJ"/>
-                                    <constraint firstItem="azD-eH-RpS" firstAttribute="centerY" secondItem="db5-Mt-hSr" secondAttribute="centerY" constant="103" id="eSg-hH-NZu"/>
                                     <constraint firstItem="RrX-wF-D7D" firstAttribute="centerY" secondItem="db5-Mt-hSr" secondAttribute="centerY" id="hkO-lv-DTI"/>
                                     <constraint firstItem="RrX-wF-D7D" firstAttribute="centerX" secondItem="db5-Mt-hSr" secondAttribute="centerX" id="tIm-ER-1LG"/>
                                 </constraints>
@@ -116,8 +100,24 @@
                                             <segue destination="BVx-yp-9ow" kind="show" identifier="goToRegistration" id="sbU-FL-xJd"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azD-eH-RpS">
+                                        <rect key="frame" x="129" y="37" width="116" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="116" id="Er3-lj-ufG"/>
+                                            <constraint firstAttribute="height" constant="22" id="S7Y-FX-Lnq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
+                                        <state key="normal" title="Login">
+                                            <color key="titleColor" red="0.30196078431372547" green="0.31372549019607843" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EAp-MX-tB6"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="azD-eH-RpS" firstAttribute="centerX" secondItem="uz6-b1-FvS" secondAttribute="centerX" id="3Ne-hZ-NNH"/>
+                                    <constraint firstItem="azD-eH-RpS" firstAttribute="centerY" secondItem="uz6-b1-FvS" secondAttribute="centerY" constant="-99" id="3uv-uA-vM3"/>
                                     <constraint firstItem="90X-pK-QDk" firstAttribute="leading" secondItem="uz6-b1-FvS" secondAttribute="leading" constant="8" id="HYX-cN-WRw"/>
                                     <constraint firstAttribute="bottom" secondItem="90X-pK-QDk" secondAttribute="bottom" constant="8" id="VQt-3U-cQ1"/>
                                 </constraints>

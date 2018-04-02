@@ -6,7 +6,8 @@
 //  Copyright © 2018 Jordan Woods. All rights reserved.
 //
 
-// Yellow color: ffc300
+// Yellow color: ffca28
+// Orange color: d95d39
 
 import UIKit
 import Firebase

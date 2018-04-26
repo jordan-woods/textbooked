@@ -6,6 +6,8 @@
 //  Copyright © 2018 Jordan Woods. All rights reserved.
 //
 
+import UIKit
+
 class Textbook {
     
     var title : String
@@ -15,8 +17,9 @@ class Textbook {
     var condition : String
     var isbn : String
     var edition : String
+    var photo : UIImage
     
-    init(bookTitle: String, bookAuthor: String, bookISBN: String, bookEdition: String, name: String, bookPrice: String, bookCondition: String) {
+    init(bookTitle: String, bookAuthor: String, bookISBN: String, bookEdition: String, name: String, bookPrice: String, bookCondition: String, bookImage: UIImage) {
         title = bookTitle
         author = bookAuthor
         isbn = bookISBN
@@ -24,5 +27,6 @@ class Textbook {
         price = bookPrice
         condition = bookCondition
         edition = bookEdition
+        photo = bookImage
     }
 }

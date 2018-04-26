@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
+import FirebaseStorage
 
 class SellViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var textbookTitle: UITextField!
@@ -21,6 +23,7 @@ class SellViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var uploadButton: UIButton!
     
     let picker = UIImagePickerController()
+    var selectedTextbookPhoto = UIImage()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,37 +49,49 @@ class SellViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         // let image = URL(string: imageUpload.image)!
         
-        let textbookDB = Database.database().reference().child("Textbooks")
-        // let imageDB = Storage.storage().reference().child("Images")
-        let textbookDictionary = ["Poster": Auth.auth().currentUser?.email,
-                                  "TextbookTitle": textbookTitle.text!,
-                                  "TextbookISBN": textbookISBN.text!,
-                                  "TextbookAuthor": textbookAuthor.text!,
-                                  "TextbookEdition": textbookEdition.text!,
-                                  "TextbookQuality": textbookQuality.titleForSegment(at: textbookQuality.selectedSegmentIndex),
-                                  "TextbookPrice": textbookPrice.text!]
+        let storageRef = Storage.storage().reference(forURL: "gs://textbooked-219f7.appspot.com").child("textbook_image").child(textbookTitle.text!)
         
-        textbookDB.childByAutoId().setValue(textbookDictionary) {
-            (error, reference) in
-            
-            if error != nil {
-                print(error!)
-            } else {
-                print("Textbook successfully saved!")
+        if let imgUpload = self.selectedTextbookPhoto as? UIImage, let imageData = UIImageJPEGRepresentation(imgUpload, 0.1) {
+            storageRef.putData(imageData, metadata: nil) { (metadata, error) in
+                if error != nil {
+                    return
+                }
                 
-                self.textbookTitle.isEnabled = true
-                self.textbookISBN.isEnabled = true
-                self.textbookAuthor.isEnabled = true
-                self.textbookEdition.isEnabled = true
-                self.textbookQuality.isEnabled = true
-                self.textbookPrice.isEnabled = true
-                self.postButton.isEnabled = true
+                let textbookImageURL = metadata?.downloadURL()?.absoluteString
+                let textbookDB = Database.database().reference().child("Textbooks")
+                // let imageDB = Storage.storage().reference().child("Images")
+                let textbookDictionary = ["Poster": Auth.auth().currentUser?.email,
+                                          "TextbookTitle": self.textbookTitle.text!,
+                                          "TextbookISBN": self.textbookISBN.text!,
+                                          "TextbookAuthor": self.textbookAuthor.text!,
+                                          "TextbookEdition": self.textbookEdition.text!,
+                                          "TextbookQuality": self.textbookQuality.titleForSegment(at: self.textbookQuality.selectedSegmentIndex),
+                                          "TextbookPrice": self.textbookPrice.text!,
+                                          "TextbookPhoto": textbookImageURL]
                 
-                self.textbookTitle.text = ""
-                self.textbookISBN.text = ""
-                self.textbookAuthor.text = ""
-                self.textbookEdition.text = ""
-                self.textbookPrice.text = ""
+                textbookDB.childByAutoId().setValue(textbookDictionary) {
+                    (error, reference) in
+                    
+                    if error != nil {
+                        print(error!)
+                    } else {
+                        print("Textbook successfully saved!")
+                        
+                        self.textbookTitle.isEnabled = true
+                        self.textbookISBN.isEnabled = true
+                        self.textbookAuthor.isEnabled = true
+                        self.textbookEdition.isEnabled = true
+                        self.textbookQuality.isEnabled = true
+                        self.textbookPrice.isEnabled = true
+                        self.postButton.isEnabled = true
+                        
+                        self.textbookTitle.text = ""
+                        self.textbookISBN.text = ""
+                        self.textbookAuthor.text = ""
+                        self.textbookEdition.text = ""
+                        self.textbookPrice.text = ""
+                    }
+                }
             }
         }
         
@@ -92,6 +107,7 @@ class SellViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        selectedTextbookPhoto = chosenImage
         imageUpload.contentMode = .scaleAspectFit
         imageUpload.image = chosenImage
         dismiss(animated:true, completion: nil)

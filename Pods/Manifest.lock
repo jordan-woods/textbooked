@@ -61,6 +61,7 @@ DEPENDENCIES:
   - ChameleonFramework
   - Firebase
   - Firebase/Auth
+  - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
   - SVProgressHUD
@@ -82,6 +83,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SWRevealViewController: 6d3fd97f70112fd7cef9de14df4260eacce4c63a
 
-PODFILE CHECKSUM: df76aeb0a0b694e30590fd18d84cf04ccd4239b7
+PODFILE CHECKSUM: 18dddf84d0e66cf4683e8df76d58a1169c7d13d1
 
 COCOAPODS: 1.4.0

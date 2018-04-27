@@ -45,7 +45,22 @@ class BuyViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         cell.textbookCondition.text = textbookArray[indexPath.row].condition
         cell.sellPrice.text = textbookArray[indexPath.row].price
         cell.sellerName.text = textbookArray[indexPath.row].sellerName
-        cell.textbookImage.image = textbookArray[indexPath.row].photo
+        
+        let imageRef = Storage.storage().reference().child("textbook_image").child(cell.textbookTitle.text!)
+        print("IMAGE REF")
+        print(imageRef)
+        // var image = UIImage()
+        
+        imageRef.getData(maxSize: 1 * 1024 * 1024, completion: { (data, error) in
+            if let error = error {
+                print("ERRORRRRRRRRRRRRR")
+                print(error)
+            } else {
+                print("Image found!!!")
+                cell.textbookImage.contentMode = .scaleAspectFit
+                cell.textbookImage.image = UIImage(data: data!)!
+            }
+        })
         
         return cell
     }
@@ -89,26 +104,9 @@ class BuyViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             let poster = snapshotValue["Poster"]!
             let quality = snapshotValue["TextbookQuality"]!
             let price = snapshotValue["TextbookPrice"]!
-            // let image = snapshotValue["TextbookPhoto"]!
             
-            let imageRef = Storage.storage().reference().child("textbook_image").child(title)
-            print("IMAGE REF")
-            print(imageRef)
-            var image = UIImage()
             
-            imageRef.getData(maxSize: 1 * 1024 * 1024, completion: { (data, error) in
-                if let error = error {
-                    print("ERRORRRRRRRRRRRRR")
-                    print(error)
-                } else {
-                    print("Image found!!!")
-                    image = UIImage(data: data!)!
-                }
-            })
-            
-            print(image)
-            
-            let textbook = Textbook(bookTitle: title, bookAuthor: author, bookISBN: isbn, bookEdition: edition, name: poster, bookPrice: price, bookCondition: quality, bookImage: image)
+            let textbook = Textbook(bookTitle: title, bookAuthor: author, bookISBN: isbn, bookEdition: edition, name: poster, bookPrice: price, bookCondition: quality)
             
             self.textbookArray.append(textbook)
             self.configureTableView()

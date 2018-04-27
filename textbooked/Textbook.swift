@@ -17,9 +17,9 @@ class Textbook {
     var condition : String
     var isbn : String
     var edition : String
-    var photo : UIImage
+    // var photo : UIImage
     
-    init(bookTitle: String, bookAuthor: String, bookISBN: String, bookEdition: String, name: String, bookPrice: String, bookCondition: String, bookImage: UIImage) {
+    init(bookTitle: String, bookAuthor: String, bookISBN: String, bookEdition: String, name: String, bookPrice: String, bookCondition: String) {
         title = bookTitle
         author = bookAuthor
         isbn = bookISBN
@@ -27,6 +27,6 @@ class Textbook {
         price = bookPrice
         condition = bookCondition
         edition = bookEdition
-        photo = bookImage
+        // photo = bookImage
     }
 }

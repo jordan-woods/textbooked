@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class BuyDetailsViewController: UIViewController {
     var textbookTitlePassed : String?
@@ -14,6 +15,7 @@ class BuyDetailsViewController: UIViewController {
     var textbookConditionPassed : String?
     var sellerNamePassed : String?
     var textbookPricePassed : String?
+    var textbookImagePassed : UIImage?
     
     @IBOutlet weak var textbookImage: UIImageView!
     @IBOutlet weak var textbookTitle: UILabel!
@@ -30,6 +32,20 @@ class BuyDetailsViewController: UIViewController {
         textbookCondition.text = textbookConditionPassed
         textbookPrice.text = textbookPricePassed
         sellerName.text = sellerNamePassed
+        
+        let imageRef = Storage.storage().reference().child("textbook_image").child(textbookTitlePassed!)
+        
+        imageRef.getData(maxSize: 1 * 1024 * 1024, completion: { (data, error) in
+            if let error = error {
+                print(error)
+            } else {
+                print("HAPPENING NOW")
+                self.textbookImage.image = UIImage(data: data!)!
+            }
+        })
+        
+        textbookImage.contentMode = .scaleAspectFit
+        textbookImage.image = textbookImagePassed
     }
 
     override func didReceiveMemoryWarning() {

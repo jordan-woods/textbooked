@@ -47,16 +47,11 @@ class BuyViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         cell.sellerName.text = textbookArray[indexPath.row].sellerName
         
         let imageRef = Storage.storage().reference().child("textbook_image").child(cell.textbookTitle.text!)
-        print("IMAGE REF")
-        print(imageRef)
-        // var image = UIImage()
         
         imageRef.getData(maxSize: 1 * 1024 * 1024, completion: { (data, error) in
             if let error = error {
-                print("ERRORRRRRRRRRRRRR")
                 print(error)
             } else {
-                print("Image found!!!")
                 cell.textbookImage.contentMode = .scaleAspectFit
                 cell.textbookImage.image = UIImage(data: data!)!
             }
@@ -84,6 +79,7 @@ class BuyViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             destinationVC.textbookPricePassed = textbookArray[path.row].price
             destinationVC.sellerNamePassed = textbookArray[path.row].sellerName
             destinationVC.textbookConditionPassed = textbookArray[path.row].condition
+            
         }
     }
     
@@ -106,7 +102,7 @@ class BuyViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             let price = snapshotValue["TextbookPrice"]!
             
             
-            let textbook = Textbook(bookTitle: title, bookAuthor: author, bookISBN: isbn, bookEdition: edition, name: poster, bookPrice: price, bookCondition: quality)
+            let textbook = Textbook(bookTitle: title, bookAuthor: author, bookISBN: isbn, bookEdition: edition, name: poster, bookPrice: price, bookCondition: quality, soldStatus: false)
             
             self.textbookArray.append(textbook)
             self.configureTableView()

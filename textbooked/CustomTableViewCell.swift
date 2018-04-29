@@ -15,6 +15,7 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet weak var textbookCondition: UILabel!
     @IBOutlet weak var sellerName: UILabel!
     @IBOutlet weak var sellPrice: UILabel!
+    @IBOutlet weak var purchasedStatus: UILabel!
     
     
     override func awakeFromNib() {

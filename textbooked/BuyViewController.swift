@@ -9,8 +9,10 @@
 import UIKit
 import Firebase
 
-class BuyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class BuyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CanRecieve {
     var textbookArray : [Textbook] = [Textbook]()
+    
+    let textbookDB = Database.database().reference().child("Textbooks")
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var textbookTableView: UITableView!
@@ -37,6 +39,12 @@ class BuyViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         // Dispose of any resources that can be recreated.
     }
     
+    func dataReceived(isbn: String) {
+        let db = Database.database().reference().child("Textbooks").child(isbn)
+        let dbUpdate = ["TextbookPurchased": "true"]
+        db.updateChildValues(dbUpdate)
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customTableViewCell", for: indexPath) as! CustomTableViewCell
         
@@ -45,6 +53,13 @@ class BuyViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         cell.textbookCondition.text = textbookArray[indexPath.row].condition
         cell.sellPrice.text = textbookArray[indexPath.row].price
         cell.sellerName.text = textbookArray[indexPath.row].sellerName
+        
+        if (textbookArray[indexPath.row].sold == "true") {
+            cell.purchasedStatus.text = "Purchased"
+            cell.purchasedStatus.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 4)
+        } else {
+            cell.purchasedStatus.text = ""
+        }
         
         let imageRef = Storage.storage().reference().child("textbook_image").child(cell.textbookTitle.text!)
         
@@ -79,6 +94,10 @@ class BuyViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             destinationVC.textbookPricePassed = textbookArray[path.row].price
             destinationVC.sellerNamePassed = textbookArray[path.row].sellerName
             destinationVC.textbookConditionPassed = textbookArray[path.row].condition
+            destinationVC.textbookISBNPassed = textbookArray[path.row].isbn
+            destinationVC.textbookPurchasedStatus = textbookArray[path.row].sold
+            
+            destinationVC.delegate = self
             
         }
     }
@@ -89,7 +108,6 @@ class BuyViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     
     func retrieveTextbooks() {
-        let textbookDB = Database.database().reference().child("Textbooks")
         textbookDB.observe(.childAdded) { (snapshot) in
             let snapshotValue = snapshot.value as! Dictionary<String,String>
             
@@ -100,9 +118,11 @@ class BuyViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             let poster = snapshotValue["Poster"]!
             let quality = snapshotValue["TextbookQuality"]!
             let price = snapshotValue["TextbookPrice"]!
+            let purchased = snapshotValue["TextbookPurchased"]!
             
+            print(purchased)
             
-            let textbook = Textbook(bookTitle: title, bookAuthor: author, bookISBN: isbn, bookEdition: edition, name: poster, bookPrice: price, bookCondition: quality, soldStatus: false)
+            let textbook = Textbook(bookTitle: title, bookAuthor: author, bookISBN: isbn, bookEdition: edition, name: poster, bookPrice: price, bookCondition: quality, soldStatus: purchased)
             
             self.textbookArray.append(textbook)
             self.configureTableView()

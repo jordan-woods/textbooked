@@ -47,8 +47,6 @@ class SellViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         textbookPrice.isEnabled = false
         postButton.isEnabled = false
         
-        // let image = URL(string: imageUpload.image)!
-        
         let storageRef = Storage.storage().reference(forURL: "gs://textbooked-219f7.appspot.com").child("textbook_image").child(textbookTitle.text!)
         
         if let imgUpload = self.selectedTextbookPhoto as? UIImage, let imageData = UIImageJPEGRepresentation(imgUpload, 0.1) {
@@ -67,9 +65,10 @@ class SellViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                                           "TextbookEdition": self.textbookEdition.text!,
                                           "TextbookQuality": self.textbookQuality.titleForSegment(at: self.textbookQuality.selectedSegmentIndex),
                                           "TextbookPrice": self.textbookPrice.text!,
-                                          "TextbookPhoto": textbookImageURL]
+                                          "TextbookPhoto": textbookImageURL,
+                                          "TextbookPurchased": "false"]
                 
-                textbookDB.childByAutoId().setValue(textbookDictionary) {
+                textbookDB.child(self.textbookISBN.text!).setValue(textbookDictionary) {
                     (error, reference) in
                     
                     if error != nil {

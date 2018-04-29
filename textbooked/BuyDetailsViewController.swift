@@ -9,13 +9,22 @@
 import UIKit
 import Firebase
 
+protocol CanRecieve {
+    func dataReceived(isbn: String)
+}
+
 class BuyDetailsViewController: UIViewController {
+    
+    var delegate : CanRecieve?
+    
     var textbookTitlePassed : String?
     var textbookAuthorPassed : String?
     var textbookConditionPassed : String?
     var sellerNamePassed : String?
     var textbookPricePassed : String?
     var textbookImagePassed : UIImage?
+    var textbookISBNPassed : String?
+    var textbookPurchasedStatus : String?
     
     @IBOutlet weak var textbookImage: UIImageView!
     @IBOutlet weak var textbookTitle: UILabel!
@@ -23,6 +32,7 @@ class BuyDetailsViewController: UIViewController {
     @IBOutlet weak var textbookCondition: UILabel!
     @IBOutlet weak var sellerName: UILabel!
     @IBOutlet weak var textbookPrice: UILabel!
+    @IBOutlet weak var textbookPurchasedButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,13 +49,18 @@ class BuyDetailsViewController: UIViewController {
             if let error = error {
                 print(error)
             } else {
-                print("HAPPENING NOW")
                 self.textbookImage.image = UIImage(data: data!)!
             }
         })
         
         textbookImage.contentMode = .scaleAspectFit
         textbookImage.image = textbookImagePassed
+        
+        if(textbookPurchasedStatus == "true") {
+            textbookPurchasedButton.setTitle("Already Purchased", for: .disabled)
+            textbookPurchasedButton.backgroundColor = UIColor.darkGray
+            textbookPurchasedButton.isEnabled = false
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,6 +69,8 @@ class BuyDetailsViewController: UIViewController {
     }
     
     @IBAction func purchasePressed(_ sender: UIButton) {
+        delegate?.dataReceived(isbn: textbookISBNPassed!)
+        _ = navigationController?.popViewController(animated: true)
     }
     
     

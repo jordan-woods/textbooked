@@ -63,7 +63,7 @@
                         <rect key="frame" x="116" y="0.0" width="204" height="180"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sell Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ld4-ao-4qM">
-                                <rect key="frame" x="145.5" y="151" width="51.5" height="21"/>
+                                <rect key="frame" x="145" y="151" width="52" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="urn-HA-iWA"/>
                                 </constraints>
@@ -72,21 +72,30 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Textbook Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lts-sc-mBf">
-                                <rect key="frame" x="0.0" y="50" width="88.5" height="20"/>
+                                <rect key="frame" x="0.0" y="50" width="89" height="20"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Textbook Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJS-Lf-jHa">
-                                <rect key="frame" x="0.0" y="30" width="109.5" height="20"/>
+                                <rect key="frame" x="0.0" y="30" width="110" height="20"/>
                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Textbook Condition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGA-hh-oA2">
-                                <rect key="frame" x="0.0" y="112" width="105.5" height="22"/>
+                                <rect key="frame" x="0.0" y="112" width="106" height="22"/>
                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="12"/>
                                 <color key="textColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Purchased" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WjH-PV-v9X">
+                                <rect key="frame" x="92" y="39" width="105" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="105" id="ENB-We-sjm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -96,12 +105,15 @@
                             <constraint firstItem="eJS-Lf-jHa" firstAttribute="leading" secondItem="lts-sc-mBf" secondAttribute="leading" id="B5v-c5-5Pz"/>
                             <constraint firstItem="KGA-hh-oA2" firstAttribute="top" secondItem="lts-sc-mBf" secondAttribute="bottom" constant="42" id="FYr-41-BOB"/>
                             <constraint firstItem="Ld4-ao-4qM" firstAttribute="bottom" secondItem="9bk-DD-7uT" secondAttribute="bottomMargin" id="HQD-Lo-iNN"/>
+                            <constraint firstItem="WjH-PV-v9X" firstAttribute="trailing" secondItem="Ld4-ao-4qM" secondAttribute="trailing" id="VBn-bK-vYC"/>
                             <constraint firstItem="lts-sc-mBf" firstAttribute="top" secondItem="9bk-DD-7uT" secondAttribute="top" constant="50" id="Wco-PT-jbS"/>
+                            <constraint firstItem="KGA-hh-oA2" firstAttribute="top" secondItem="WjH-PV-v9X" secondAttribute="bottom" constant="47" id="XcM-e1-KYf"/>
                             <constraint firstAttribute="bottom" secondItem="KGA-hh-oA2" secondAttribute="bottom" constant="46" id="Y8O-cy-Mm3"/>
                             <constraint firstItem="eJS-Lf-jHa" firstAttribute="leading" secondItem="9bk-DD-7uT" secondAttribute="leading" id="erN-FA-9gn"/>
                             <constraint firstItem="lts-sc-mBf" firstAttribute="leading" secondItem="KGA-hh-oA2" secondAttribute="leading" id="isc-VM-FO4"/>
                             <constraint firstItem="KGA-hh-oA2" firstAttribute="top" secondItem="eJS-Lf-jHa" secondAttribute="bottom" constant="62" id="ivz-3O-Vp3"/>
                             <constraint firstItem="eJS-Lf-jHa" firstAttribute="top" secondItem="9bk-DD-7uT" secondAttribute="top" constant="30" id="qoM-JW-vzw"/>
+                            <constraint firstItem="WjH-PV-v9X" firstAttribute="top" secondItem="9bk-DD-7uT" secondAttribute="top" constant="39" id="rhs-3D-Xyb"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -117,6 +129,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="purchasedStatus" destination="WjH-PV-v9X" id="Qdv-gU-fCo"/>
                 <outlet property="sellPrice" destination="Ld4-ao-4qM" id="VPC-lc-sLB"/>
                 <outlet property="sellerName" destination="rYW-rM-SIy" id="YVw-if-5sj"/>
                 <outlet property="textbookAuthor" destination="lts-sc-mBf" id="c8c-hM-C7z"/>

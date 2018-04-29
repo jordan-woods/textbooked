@@ -415,6 +415,7 @@
                         <outlet property="textbookCondition" destination="PMj-gO-Lgn" id="bQb-Rl-6do"/>
                         <outlet property="textbookImage" destination="eTf-yj-Hor" id="xiE-H8-sSl"/>
                         <outlet property="textbookPrice" destination="Cyy-hA-DBz" id="pYQ-9e-6f4"/>
+                        <outlet property="textbookPurchasedButton" destination="Tub-TJ-LsP" id="ueC-Dd-YQo"/>
                         <outlet property="textbookTitle" destination="ANe-ST-KeL" id="YdY-IW-7Nv"/>
                     </connections>
                 </viewController>
@@ -542,6 +543,6 @@
         <image name="logo" width="1452" height="302"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hjF-wE-OLe"/>
+        <segue reference="u4N-ZJ-Rk6"/>
     </inferredMetricsTieBreakers>
 </document>

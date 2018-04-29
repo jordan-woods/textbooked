@@ -48,33 +48,13 @@ class SellViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if (textField == textbookPrice) {
-            scrollView.setContentOffset(CGPoint(x: 0, y: 250), animated: true)
+            scrollView.setContentOffset(CGPoint(x: 0, y: 175), animated: true)
         }
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
     }
-    
-//    func addObservers() {
-//        NotificationCenter.default.addObserver(forName: .UIKeyboardWillShow, object: nil, queue: nil) { (notification) in
-//            self.keyboardWillShow(notification: notification)
-//        }
-//
-//        NotificationCenter.default.addObserver(forName: .UIKeyboardWillHide, object: nil, queue: nil) { (notification) in
-//            self.keyboardWillHide(notification: notification)
-//        }
-//    }
-//
-//    func keyboardWillShow(notification: Notification) {
-//        guard let userInfo = notification.userInfo,
-//            let frame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
-//                return
-//        }
-//
-//        let contentInset = UIEdgeInsets(top: 0, left: 0, bottom: frame.height, right: 0)
-//
-//    }
     
     @IBAction func postPressed(_ sender: UIButton) {
         textbookTitle.isEnabled = false
@@ -131,8 +111,6 @@ class SellViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                 }
             }
         }
-        
-        // imageDB.setValue(imageUpload.image.)
     }
     
     @IBAction func uploadPhotoPressed(_ sender: UIButton) {
@@ -148,7 +126,6 @@ class SellViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         imageUpload.contentMode = .scaleAspectFit
         imageUpload.image = chosenImage
         dismiss(animated:true, completion: nil)
-        uploadButton?.removeFromSuperview()
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {

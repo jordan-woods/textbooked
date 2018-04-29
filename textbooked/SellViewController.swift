@@ -11,7 +11,7 @@ import Firebase
 import FirebaseDatabase
 import FirebaseStorage
 
-class SellViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class SellViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     @IBOutlet weak var textbookTitle: UITextField!
     @IBOutlet weak var textbookISBN: UITextField!
     @IBOutlet weak var textbookAuthor: UITextField!
@@ -21,6 +21,7 @@ class SellViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var postButton: UIButton!
     @IBOutlet weak var imageUpload: UIImageView!
     @IBOutlet weak var uploadButton: UIButton!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     let picker = UIImagePickerController()
     var selectedTextbookPhoto = UIImage()
@@ -31,12 +32,49 @@ class SellViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         self.view.backgroundColor = UIColor.white
         
         picker.delegate = self
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapView(gesture:)))
+        view.addGestureRecognizer(tapGesture)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @objc func didTapView(gesture: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if (textField == textbookPrice) {
+            scrollView.setContentOffset(CGPoint(x: 0, y: 250), animated: true)
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
+    }
+    
+//    func addObservers() {
+//        NotificationCenter.default.addObserver(forName: .UIKeyboardWillShow, object: nil, queue: nil) { (notification) in
+//            self.keyboardWillShow(notification: notification)
+//        }
+//
+//        NotificationCenter.default.addObserver(forName: .UIKeyboardWillHide, object: nil, queue: nil) { (notification) in
+//            self.keyboardWillHide(notification: notification)
+//        }
+//    }
+//
+//    func keyboardWillShow(notification: Notification) {
+//        guard let userInfo = notification.userInfo,
+//            let frame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
+//                return
+//        }
+//
+//        let contentInset = UIEdgeInsets(top: 0, left: 0, bottom: frame.height, right: 0)
+//
+//    }
     
     @IBAction func postPressed(_ sender: UIButton) {
         textbookTitle.isEnabled = false

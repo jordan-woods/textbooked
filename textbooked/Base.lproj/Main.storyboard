@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -143,7 +144,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="background" destination="8bC-Xf-vdC" id="kD7-Zi-hTn"/>
+                        <outlet property="emailHeightConstraint" destination="Tfe-Jc-MvT" id="e26-qG-4EE"/>
                         <outlet property="passwordField" destination="mqs-gK-BvY" id="7PV-9G-2x4"/>
+                        <outlet property="passwordHeightConstraint" destination="bMp-Yh-Cel" id="h3j-Z0-EKM"/>
                         <outlet property="usernameField" destination="gNE-Vo-bRo" id="1eB-8a-84X"/>
                         <segue destination="jb5-DX-pwm" kind="show" identifier="goToBuySell" id="u4N-ZJ-Rk6"/>
                     </connections>
@@ -160,113 +164,187 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ISBN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DgQ-gv-3k6">
-                                <rect key="frame" x="56" y="75" width="263" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Za6-hX-wEe">
-                                <rect key="frame" x="56" y="113" width="263" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Author" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qij-jR-vek">
-                                <rect key="frame" x="56" y="151" width="263" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Edition" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gLq-BY-9Tb">
-                                <rect key="frame" x="56" y="189" width="263" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Book Photos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9DN-e5-Z58">
-                                <rect key="frame" x="16" y="248" width="132" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Book Quality" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wi9-ko-8Mf">
-                                <rect key="frame" x="16" y="394" width="132" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="ufc-Dl-jAp">
-                                <rect key="frame" x="16" y="436" width="343" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="Like New"/>
-                                    <segment title="Good"/>
-                                    <segment title="Acceptable"/>
-                                    <segment title="Poor"/>
-                                </segments>
-                            </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mtr-Db-yna">
-                                <rect key="frame" x="16" y="492" width="59" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Minimum Offer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DqS-mP-H1Q">
-                                <rect key="frame" x="40" y="527" width="170" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TCe-XE-6oL">
-                                <rect key="frame" x="0.0" y="577" width="375" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.792156862745098" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="18"/>
-                                <state key="normal" title="POST">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="postPressed:" destination="5KL-q8-vFh" eventType="touchUpInside" id="yPc-pk-Scy"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpZ-hp-byP">
-                                <rect key="frame" x="104" y="309" width="43" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="42"/>
-                                <state key="normal" title="+">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="uploadPhotoPressed:" destination="5KL-q8-vFh" eventType="touchUpInside" id="su6-xE-gob"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Untitled copy 5" translatesAutoresizingMaskIntoConstraints="NO" id="f7u-ND-U1R">
-                                <rect key="frame" x="16" y="293" width="80" height="77"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hwr-JN-a3s">
-                                <rect key="frame" x="16" y="530" width="16" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3en-u2-e9X">
+                                <rect key="frame" x="-20" y="55" width="415" height="583"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ISBN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DgQ-gv-3k6">
+                                        <rect key="frame" x="76" y="8" width="263" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="5KL-q8-vFh" id="zcf-8s-9pp"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Za6-hX-wEe">
+                                        <rect key="frame" x="76" y="46" width="263" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="5KL-q8-vFh" id="mic-1M-DZf"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Author" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qij-jR-vek">
+                                        <rect key="frame" x="76" y="84" width="263" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="5KL-q8-vFh" id="oL8-GV-gpz"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Edition" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gLq-BY-9Tb">
+                                        <rect key="frame" x="76" y="122" width="263" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="5KL-q8-vFh" id="ots-Nz-TtJ"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Book Photos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9DN-e5-Z58">
+                                        <rect key="frame" x="36" y="172" width="132" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="132" id="IZh-k6-UfX"/>
+                                            <constraint firstAttribute="height" constant="28" id="ciz-nl-23A"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Untitled copy 5" translatesAutoresizingMaskIntoConstraints="NO" id="f7u-ND-U1R">
+                                        <rect key="frame" x="36" y="208" width="80" height="77"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="bgm-gD-ish"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpZ-hp-byP">
+                                        <rect key="frame" x="124" y="224" width="43" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="QdW-CH-Q48"/>
+                                            <constraint firstAttribute="width" constant="43" id="Yqc-3y-HCL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="42"/>
+                                        <state key="normal" title="+">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="uploadPhotoPressed:" destination="5KL-q8-vFh" eventType="touchUpInside" id="su6-xE-gob"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Book Quality" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wi9-ko-8Mf">
+                                        <rect key="frame" x="36" y="313" width="132" height="26"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="ufc-Dl-jAp">
+                                        <rect key="frame" x="36" y="347" width="343" height="29"/>
+                                        <segments>
+                                            <segment title="Like New"/>
+                                            <segment title="Good"/>
+                                            <segment title="Acceptable"/>
+                                            <segment title="Poor"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mtr-Db-yna">
+                                        <rect key="frame" x="36" y="399" width="59" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="XXW-lJ-9rH"/>
+                                            <constraint firstAttribute="width" constant="59" id="gYD-3a-SPd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hwr-JN-a3s">
+                                        <rect key="frame" x="36" y="444" width="16" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="16" id="pgB-Nd-LX7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Minimum Offer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DqS-mP-H1Q">
+                                        <rect key="frame" x="60" y="439" width="170" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="5KL-q8-vFh" id="ZPO-zd-wD4"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TCe-XE-6oL">
+                                        <rect key="frame" x="20" y="505" width="375" height="41"/>
+                                        <color key="backgroundColor" red="1" green="0.792156862745098" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="41" id="FfH-wp-VcD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="18"/>
+                                        <state key="normal" title="POST">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="postPressed:" destination="5KL-q8-vFh" eventType="touchUpInside" id="yPc-pk-Scy"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="f7u-ND-U1R" firstAttribute="leading" secondItem="wi9-ko-8Mf" secondAttribute="leading" id="0K4-HQ-XcM"/>
+                                    <constraint firstItem="ufc-Dl-jAp" firstAttribute="leading" secondItem="Mtr-Db-yna" secondAttribute="leading" id="4Pi-B5-hHC"/>
+                                    <constraint firstItem="DgQ-gv-3k6" firstAttribute="trailing" secondItem="Za6-hX-wEe" secondAttribute="trailing" id="9bj-PS-IXp"/>
+                                    <constraint firstItem="ufc-Dl-jAp" firstAttribute="centerX" secondItem="TCe-XE-6oL" secondAttribute="centerX" id="AZG-eb-zg9"/>
+                                    <constraint firstItem="f7u-ND-U1R" firstAttribute="top" secondItem="9DN-e5-Z58" secondAttribute="bottom" constant="8" symbolic="YES" id="BnG-Iw-I8Q"/>
+                                    <constraint firstItem="hpZ-hp-byP" firstAttribute="top" secondItem="9DN-e5-Z58" secondAttribute="bottom" constant="24" id="Gc7-kt-Jlg"/>
+                                    <constraint firstItem="f7u-ND-U1R" firstAttribute="centerY" secondItem="hpZ-hp-byP" secondAttribute="centerY" id="HoT-zl-zTB"/>
+                                    <constraint firstItem="DqS-mP-H1Q" firstAttribute="leading" secondItem="Hwr-JN-a3s" secondAttribute="trailing" constant="8" symbolic="YES" id="JJ4-TY-6KO"/>
+                                    <constraint firstItem="9DN-e5-Z58" firstAttribute="trailing" secondItem="wi9-ko-8Mf" secondAttribute="trailing" id="Kiz-zW-838"/>
+                                    <constraint firstItem="9DN-e5-Z58" firstAttribute="leading" secondItem="3en-u2-e9X" secondAttribute="leading" constant="36" id="N18-2q-cIJ"/>
+                                    <constraint firstItem="Qij-jR-vek" firstAttribute="leading" secondItem="gLq-BY-9Tb" secondAttribute="leading" id="NIA-UQ-HXG"/>
+                                    <constraint firstItem="TCe-XE-6oL" firstAttribute="top" secondItem="DqS-mP-H1Q" secondAttribute="bottom" constant="36" id="OZQ-MS-yXx"/>
+                                    <constraint firstItem="Qij-jR-vek" firstAttribute="top" secondItem="Za6-hX-wEe" secondAttribute="bottom" constant="8" symbolic="YES" id="RBg-J5-8l5"/>
+                                    <constraint firstItem="Za6-hX-wEe" firstAttribute="leading" secondItem="Qij-jR-vek" secondAttribute="leading" id="RfG-Fe-Hcg"/>
+                                    <constraint firstItem="Qij-jR-vek" firstAttribute="trailing" secondItem="gLq-BY-9Tb" secondAttribute="trailing" id="Tb5-4k-QSx"/>
+                                    <constraint firstItem="gLq-BY-9Tb" firstAttribute="top" secondItem="Qij-jR-vek" secondAttribute="bottom" constant="8" symbolic="YES" id="Tbn-UL-WNi"/>
+                                    <constraint firstItem="DgQ-gv-3k6" firstAttribute="centerX" secondItem="3en-u2-e9X" secondAttribute="centerX" id="aIk-Va-bfi"/>
+                                    <constraint firstItem="hpZ-hp-byP" firstAttribute="leading" secondItem="f7u-ND-U1R" secondAttribute="trailing" constant="8" symbolic="YES" id="aLw-LI-e4E"/>
+                                    <constraint firstItem="DgQ-gv-3k6" firstAttribute="top" secondItem="3en-u2-e9X" secondAttribute="topMargin" id="cAW-nw-Auf"/>
+                                    <constraint firstItem="DgQ-gv-3k6" firstAttribute="leading" secondItem="Za6-hX-wEe" secondAttribute="leading" id="dI6-Vi-5OO"/>
+                                    <constraint firstItem="Mtr-Db-yna" firstAttribute="leading" secondItem="Hwr-JN-a3s" secondAttribute="leading" id="dYu-aa-kty"/>
+                                    <constraint firstItem="Za6-hX-wEe" firstAttribute="trailing" secondItem="Qij-jR-vek" secondAttribute="trailing" id="gEH-HQ-U9Z"/>
+                                    <constraint firstItem="Mtr-Db-yna" firstAttribute="top" secondItem="ufc-Dl-jAp" secondAttribute="bottom" constant="24" id="hai-8s-iAK"/>
+                                    <constraint firstItem="9DN-e5-Z58" firstAttribute="leading" secondItem="f7u-ND-U1R" secondAttribute="leading" id="i9l-CA-HaA"/>
+                                    <constraint firstItem="wi9-ko-8Mf" firstAttribute="top" secondItem="f7u-ND-U1R" secondAttribute="bottom" constant="28" id="jnY-Mq-eTP"/>
+                                    <constraint firstItem="9DN-e5-Z58" firstAttribute="top" secondItem="gLq-BY-9Tb" secondAttribute="bottom" constant="20" id="kU0-Wg-h8L"/>
+                                    <constraint firstItem="ufc-Dl-jAp" firstAttribute="top" secondItem="wi9-ko-8Mf" secondAttribute="bottom" constant="8" symbolic="YES" id="krg-2m-kx0"/>
+                                    <constraint firstItem="wi9-ko-8Mf" firstAttribute="leading" secondItem="ufc-Dl-jAp" secondAttribute="leading" id="lFT-Dj-T0d"/>
+                                    <constraint firstItem="Hwr-JN-a3s" firstAttribute="centerY" secondItem="DqS-mP-H1Q" secondAttribute="centerY" id="ldi-nr-y2A"/>
+                                    <constraint firstItem="TCe-XE-6oL" firstAttribute="bottom" secondItem="3en-u2-e9X" secondAttribute="bottomMargin" id="o1y-L6-sdN"/>
+                                    <constraint firstItem="TCe-XE-6oL" firstAttribute="leading" secondItem="3en-u2-e9X" secondAttribute="leading" constant="20" id="pZa-XX-pt9"/>
+                                    <constraint firstItem="DgQ-gv-3k6" firstAttribute="leading" secondItem="3en-u2-e9X" secondAttribute="leading" constant="76" id="rIX-sA-xFT"/>
+                                    <constraint firstItem="hpZ-hp-byP" firstAttribute="centerX" secondItem="DqS-mP-H1Q" secondAttribute="centerX" id="urp-Pu-DXg"/>
+                                    <constraint firstAttribute="trailing" secondItem="TCe-XE-6oL" secondAttribute="trailing" constant="20" id="wQe-PH-2vf"/>
+                                    <constraint firstItem="Za6-hX-wEe" firstAttribute="top" secondItem="DgQ-gv-3k6" secondAttribute="bottom" constant="8" symbolic="YES" id="xZm-38-j5s"/>
+                                    <constraint firstItem="DqS-mP-H1Q" firstAttribute="top" secondItem="Mtr-Db-yna" secondAttribute="bottom" constant="15" id="xln-O7-us8"/>
+                                    <constraint firstItem="gLq-BY-9Tb" firstAttribute="centerX" secondItem="ufc-Dl-jAp" secondAttribute="centerX" id="yRA-gs-EUI"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="3en-u2-e9X" firstAttribute="centerX" secondItem="7Hk-d3-YMe" secondAttribute="centerX" id="7sj-JH-gGu"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="3en-u2-e9X" secondAttribute="bottom" constant="-20" id="7sq-xE-nBo"/>
+                            <constraint firstItem="3en-u2-e9X" firstAttribute="top" secondItem="7Hk-d3-YMe" secondAttribute="topMargin" constant="-9" id="8d1-kT-CeY"/>
+                            <constraint firstItem="3en-u2-e9X" firstAttribute="leading" secondItem="7Hk-d3-YMe" secondAttribute="leadingMargin" constant="-36" id="O1S-CH-kvl"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="0L2-fh-wIz"/>
                     </view>
                     <navigationItem key="navigationItem" title="Book Information" id="tah-PC-f5g"/>
                     <connections>
                         <outlet property="imageUpload" destination="f7u-ND-U1R" id="Tnj-Z0-J0g"/>
                         <outlet property="postButton" destination="TCe-XE-6oL" id="s99-0Z-NII"/>
+                        <outlet property="scrollView" destination="3en-u2-e9X" id="Xic-LU-c6Q"/>
                         <outlet property="textbookAuthor" destination="Qij-jR-vek" id="5Gw-jl-gXx"/>
                         <outlet property="textbookEdition" destination="gLq-BY-9Tb" id="QEa-q5-I1g"/>
                         <outlet property="textbookISBN" destination="DgQ-gv-3k6" id="ZJg-ws-8kL"/>
@@ -487,6 +565,7 @@
                         <viewLayoutGuide key="safeArea" id="sBQ-ma-syF"/>
                     </view>
                     <connections>
+                        <outlet property="background" destination="ueY-qr-9KC" id="Wpc-gC-WvE"/>
                         <outlet property="emailField" destination="B8c-cT-JFq" id="hKp-T5-yG1"/>
                         <outlet property="passwordField" destination="WWF-fY-MMS" id="m00-DV-L4m"/>
                     </connections>

@@ -9,12 +9,16 @@
 import UIKit
 import Firebase
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet var background: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(pageTapped))
+        background.addGestureRecognizer(tapGesture)
 
         // Do any additional setup after loading the view.
     }
@@ -22,6 +26,19 @@ class RegisterViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        
+    }
+    
+    @objc func pageTapped() {
+        emailField.endEditing(true)
+        passwordField.endEditing(true)
     }
     
     @IBAction func createAccountButtonPressed(_ sender: UIButton) {

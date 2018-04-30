@@ -22,7 +22,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="textbooked" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginPage" id="BYZ-38-t0r" customClass="LoginViewController" customModule="textbooked" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -403,7 +403,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Okg-my-pM1"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Textbooks for Sale" id="7NR-nC-zmT"/>
+                    <navigationItem key="navigationItem" title="Textbooks for Sale" id="7NR-nC-zmT">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="tgz-eP-LoJ">
+                            <connections>
+                                <action selector="logoutButtonPressed:" destination="BSz-QF-WBy" id="dbX-yt-dfb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="C4s-zX-d4f" id="iNa-Iz-3EO"/>
                         <outlet property="searchDisplayController" destination="pVa-Xx-Oqq" id="Jg5-3T-UOk"/>
@@ -577,6 +583,7 @@
         <!--BUY-->
         <scene sceneID="BFq-a4-0cC">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kbJ-Nd-CaF" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zke-Aq-lOk" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="BUY" id="iJm-yy-Rxj">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-16"/>
@@ -591,13 +598,13 @@
                         <segue destination="BSz-QF-WBy" kind="relationship" relationship="rootViewController" id="4hT-xo-oH5"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kbJ-Nd-CaF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2297.5999999999999" y="-284.25787106446779"/>
         </scene>
         <!--SELL-->
         <scene sceneID="mOg-82-obQ">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cPQ-pS-bGe" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="llh-xg-JJY" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="SELL" id="AWb-OF-WL3">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-16"/>
@@ -612,7 +619,6 @@
                         <segue destination="5KL-q8-vFh" kind="relationship" relationship="rootViewController" id="336-Bv-jlm"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cPQ-pS-bGe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2297.5999999999999" y="379.61019490254876"/>
         </scene>

@@ -39,6 +39,21 @@ class BuyViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func logoutButtonPressed(_ sender: UIBarButtonItem) {
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            // vc is the Storyboard ID that you added
+            // as! ... Add your ViewController class name that you want to navigate to
+            let controller = storyboard.instantiateViewController(withIdentifier: "loginPage") as! LoginViewController
+            self.present(controller, animated: true, completion: { () -> Void in
+            })
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+    }
+    
     func dataReceived(isbn: String) {
         let db = Database.database().reference().child("Textbooks").child(isbn)
         let dbUpdate = ["TextbookPurchased": "true"]
